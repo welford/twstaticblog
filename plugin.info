@@ -1,0 +1,6 @@
+{
+	"title": "$:/plugins/welford/staticlinks",
+	"description": "Enables a blog style folder structure when exporting static websites",
+	"author": "James.W.Anderson",
+	"list": "README"
+}
