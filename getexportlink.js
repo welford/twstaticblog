@@ -49,7 +49,7 @@ exports.run = function() {
 		path_to_root="../"			
 	}
 	//index.html and framework stuff are special and go in the root
-	else if(attr==INDEX_EXP_ATTR || attr==FRAMEWORK_EXP_ATTR){
+	else if(attr==INDEX_EXP_ATTR || attr==FRAMEWORK_EXP_ATTR){		
 		path_to_root="./"	
 	}
 
@@ -84,7 +84,7 @@ exports.run = function() {
 		wikiLinkTemplate = wikiLinkTemplateMacro ? wikiLinkTemplateMacro.trim() : "#$uri_encoded$",
 		wikiLinkText = wikiLinkTemplate.replace("$uri_encoded$",encodeURIComponent(title));	
 	wikiLinkText = wikiLinkText.replace("$uri_doubleencoded$",encodeURIComponent(encodeURIComponent(title)));
-	console.log((finalLink + wikiLinkText).toLocaleLowerCase());
+	//console.log((finalLink + wikiLinkText).toLocaleLowerCase());
 	return (finalLink + wikiLinkText).toLocaleLowerCase();
 };
 
