@@ -145,8 +145,6 @@ Error message and password prompt
 
 <li>$:/themes/tiddlywiki/vanilla</li>
 
-<li>$:/themes/welford/phasersonkill</li>
-
 <li>$:/themes/welford/phasersonkill-static</li>
 
 <li>A-Z</li>
@@ -163,11 +161,15 @@ Error message and password prompt
 
 <li>hidden tags</li>
 
+<li>Katex Example</li>
+
 <li>sample</li>
 
 <li>Tags</li>
 
 <li>This Is a Blog Post</li>
+
+<li>This the the Index</li>
 
 <li>wikitext</li>
 
@@ -5403,19 +5405,34 @@ Error message and password prompt
 <div title="$:/isEncrypted">
 <pre>no</pre>
 </div>
-<div modified="20150220225825463" title="$:/state/tab--1498284803">
-<pre>$:/core/ui/AdvancedSearch/System</pre>
+<div modified="20150221163133394" title="$:/state/tab--1498284803">
+<pre>$:/core/ui/AdvancedSearch/Shadows</pre>
 </div>
 <div modified="20150220232824403" title="$:/state/tab/sidebar--1835078512">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
-<div created="20150220233034545" modified="20150220233823907" title="$:/StaticBanner">
-<pre>&lt;div&gt;[[index]] [[Tags]] [[About]]&lt;/div&gt;</pre>
+<div created="20150220233034545" modified="20150221161523984" title="$:/StaticBanner">
+<pre>&lt;div id=&quot;banner&quot; class=&quot;outer&quot;&gt; 
+&lt;div class=&quot;inner&quot;&gt; 
+@@.banner-title 
+[[index]]
+@@
+
+@@.banner-tags
+[[Tags]]
+@@
+
+@@.banner-info
+[[About]]
+@@
+
+&lt;/div&gt;
+&lt;/div&gt;</pre>
 </div>
-<div list="$:/Import [[Exporting Static Blogs]] $:/StaticBanner About" title="$:/StoryList">
+<div list="[[Exporting Static Blogs]]" title="$:/StoryList">
 <pre></pre>
 </div>
-<div created="20150220225725320" modified="20150220225824070" title="$:/temp/advancedsearch">
+<div created="20150220225725320" modified="20150221163136298" title="$:/temp/advancedsearch">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -5432,11 +5449,11 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20150220223524629" modified="20150220233304912" title="$:/temp/NewTagName">
+<div created="20150220223524629" modified="20150221163947319" title="$:/temp/NewTagName">
 <pre></pre>
 </div>
-<div created="20150220233118974" modified="20150220233118974" title="$:/temp/search">
-<pre>Framework Posts</pre>
+<div created="20150220233118974" modified="20150221163116345" title="$:/temp/search">
+<pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="A clean theme that emphasises individual tiddlers" name="Snow White" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.7">
 <pre>{
@@ -5515,158 +5532,7 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div author="James.W.Anderson" bag="default" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="custom theme based on Seamless" name="PhasersOnKill" plugin-type="theme" revision="0" title="$:/themes/welford/phasersonkill" type="application/json" version="5.1.8-prerelease">
-<pre>{
-    &quot;tiddlers&quot;: {
-        &quot;$:/config/AnimationDuration&quot;: {
-            &quot;created&quot;: &quot;20140710201328155&quot;,
-            &quot;modified&quot;: &quot;20140710204315791&quot;,
-            &quot;title&quot;: &quot;$:/config/AnimationDuration&quot;,
-            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
-            &quot;text&quot;: &quot;100&quot;
-        },
-        &quot;$:/themes/tiddlywiki/vanilla/metrics/fontsize&quot;: {
-            &quot;created&quot;: &quot;20140710194455567&quot;,
-            &quot;modified&quot;: &quot;20140710204321575&quot;,
-            &quot;title&quot;: &quot;$:/themes/tiddlywiki/vanilla/metrics/fontsize&quot;,
-            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
-            &quot;text&quot;: &quot;14px&quot;
-        },
-        &quot;$:/themes/tiddlywiki/vanilla/metrics/lineheight&quot;: {
-            &quot;created&quot;: &quot;20140710194440895&quot;,
-            &quot;modified&quot;: &quot;20140710204323543&quot;,
-            &quot;title&quot;: &quot;$:/themes/tiddlywiki/vanilla/metrics/lineheight&quot;,
-            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
-            &quot;text&quot;: &quot;16px&quot;
-        },
-        &quot;$:/themes/welford/phasersonkill/base&quot;: {
-            &quot;title&quot;: &quot;$:/themes/welford/phasersonkill/base&quot;,
-            &quot;tags&quot;: &quot;[[$:/tags/Stylesheet]]&quot;,
-            &quot;list-after&quot;: &quot;$:/themes/tiddlywiki/vanilla/base&quot;,
-            &quot;text&quot;: &quot;\\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline\n\n/*\r\nRules copied from Snow White---------------------------------------------\r\n*/\n\n.tc-page-controls button svg, .tc-tiddler-controls button svg, .tc-topbar button svg {\r\n\t&lt;&lt;transition \&quot;fill 150ms ease-in-out\&quot;&gt;&gt;\r\n}\n\n.tc-tiddler-controls button.tc-selected svg {\r\n\t&lt;&lt;filter \&quot;drop-shadow(0px -1px 2px rgba(0,0,0,0.25))\&quot;&gt;&gt;\r\n}\n\n.tc-drop-down {\r\n\tborder-radius: 4px;\r\n\t&lt;&lt;box-shadow \&quot;2px 2px 10px rgba(0, 0, 0, 0.5)\&quot;&gt;&gt;\r\n}\n\n.tc-block-dropdown {\r\n\tborder-radius: 4px;\r\n\t&lt;&lt;box-shadow \&quot;2px 2px 10px rgba(0, 0, 0, 0.5)\&quot;&gt;&gt;\r\n}\n\n.tc-modal-displayed {\r\n\t-webkit-filter: blur(4px);\r\n}\n\n.tc-modal {\r\n\tborder-radius: 6px;\r\n\t&lt;&lt;box-shadow \&quot;0 3px 7px rgba(0,0,0,0.3)\&quot;&gt;&gt;\r\n}\n\n.tc-modal-footer {\r\n\tborder-radius: 0 0 6px 6px;\r\n\t&lt;&lt;box-shadow \&quot;inset 0 1px 0 #fff\&quot;&gt;&gt;;\r\n}\n\n.tc-alert {\r\n\tborder-radius: 6px;\r\n\t&lt;&lt;box-shadow \&quot;0 3px 7px rgba(0,0,0,0.6)\&quot;&gt;&gt;\r\n}\n\n.tc-notification {\r\n\tborder-radius: 6px;\r\n\t&lt;&lt;box-shadow \&quot;0 3px 7px rgba(0,0,0,0.3)\&quot;&gt;&gt;\r\n\ttext-shadow: 0 1px 0 rgba(255,255,255, 0.8);\r\n}\n\n.tc-message-box img {\r\n\t&lt;&lt;box-shadow \&quot;1px 1px 3px rgba(0,0,0,0.5)\&quot;&gt;&gt;\r\n}\n\n/*\r\nPhaserOnKill Stuff---------------------------------------------\r\n*/\n\nblockquote { border-left:2px dashed #DDD; margin-left:12px; }\n\n.block-indent { border:none; margin-left:0px; padding-left:15px; }\n\n/* page header */\r\ndiv.tc-pagetop { \r\n position:fixed;\r\n max-height:{{$:/themes/welford/phasersonkill/metrics/headerheight}};\r\n width: 100%;\r\n top : 0px;\r\n left : 0px;\r\n padding-left: 5px;  \r\n z-index: 98;\r\n background : {{$:/themes/welford/phasersonkill/metrics/headerbgcolour}}; !important; /* as background */\r\n overflow:hidden;\r\n vertical-align:middle;\r\n line-height:{{$:/themes/welford/phasersonkill/metrics/headerheight}}; \r\n opacity:0.93;\r\n box-shadow: #ccc 0px 1px 5px;\r\n}\n\n.tc-pagetop b { color:{{$:/themes/welford/phasersonkill/metrics/headerfontcolour}}; font-size:1.1em;}\n\n.tc-story-river {\r\n width: auto;\r\n height: 100%;\r\n left: 0px;\r\n top: {{$:/themes/welford/phasersonkill/metrics/headerheight}};\r\n padding: 0px 10px 0px 10px;\r\n margin: 0;\r\n background-color: #fff;\r}\n\n.tc-tiddler-frame .tc-tiddler-body {\r\n\tfont-size: {{$:/themes/tiddlywiki/vanilla/metrics/fontsize}};\r\n\tline-height: {{$:/themes/tiddlywiki/vanilla/metrics/lineheight}};\r\n}\n\n.tc-tiddler-frame {\r\n width:100%; \r\n}\n\n\r\n/* Use the tiddler background colour for the page background */\r\nhtml {max-width:{{$:/themes/welford/phasersonkill/metrics/maxwidth}};}\n\nhtml body.tc-body {\r\n\tbackground-color: &lt;&lt;colour background&gt;&gt;;\t\r\n}\n\nhtml:-webkit-full-screen {\r\n\tbackground-color: &lt;&lt;colour background&gt;&gt;;\r\n}\n\n/* Adjust the colour of the page controls */\r\nbody.tc-body .tc-page-controls svg {\r\n\tfill: &lt;&lt;colour muted-foreground&gt;&gt;;\r\n}\n\n/* Adjust the colour of the sidebar selected tabs */\r\nbody.tc-body .tc-sidebar-lists .tc-tab-buttons button.tc-tab-selected {\r\n\tbackground-color: &lt;&lt;colour background&gt;&gt;;\r\n}\n\n/* tiddler titles  */\r\n.tc-tiddler-title {\r\nborder-bottom: 1px solid {{$:/themes/welford/phasersonkill/metrics/titlebordercolour}};\r\n}\n\n/* stop the p tags form adding unwanted padding at the stop of the story river */\n\n.tc-dropzone &gt; p,  { margin:0px; padding:0px; }\n\n/* hide the reveal stuff for the sidebar*/\r\nspan.tc-topbar {display:none;}\n\n/* color and size of controls in topbar for smallscreen version */\r\n.tc-pagetop svg.tc-image-button {\r\npadding:0;\r\nmargin:0; \r\nfill:red;\r\nwidth:{{$:/themes/welford/phasersonkill/metrics/headerheight}};\r\nheight:{{$:/themes/welford/phasersonkill/metrics/headerheight}};\r\nvertical-align:middle;\r\n}\n\n.special-search .tc-reveal .tc-search-results, .hacky-buffer .tc-reveal .tc-search-results { \r\nposition : fixed;\r\ntop : {{$:/themes/welford/phasersonkill/metrics/headerheight}};\r\nleft : 0px;\t\r\npadding: 0px 10px 0px 10px;\r\nmargin: 0;\r\nbackground:  {{$:/themes/welford/phasersonkill/metrics/headerbgcolour}};\r\nz-index: 99;\r\nbox-shadow: 0px 10px 30px  {{$:/themes/welford/phasersonkill/metrics/headerbgcolour}};\r\nborder-top:1px dashed #ddd;\r\n}\n\n.hacky-buffer .tc-reveal{ display: block; }\r\n.hacky-buffer .tc-reveal .tc-search-results { position : static;}\n\n.topbar-hack { \r\n\theight : {{$:/themes/welford/phasersonkill/metrics/headerheight}};\r\n\tposition : static;\r\n}\n\n.tc-pagetop-close-search  svg { \r\nposition: fixed;\r\ntop : {{$:/themes/welford/phasersonkill/metrics/headerheight}};\r\nwidth:{{$:/themes/welford/phasersonkill/metrics/headerheight}};\r\nheight:{{$:/themes/welford/phasersonkill/metrics/headerheight}};\r\nz-index: 99;\r\n/* close search button */\r\nright: {{$:/themes/welford/phasersonkill/metrics/border}};\r\nmargin-top:5px;\r\n}\n\n.smallscreen-only .tc-reveal\t{display : block;}\r\n.displayblock\t\t\t\t\t{display : block;}\n\n\r\n.tc-scrollable {\t\r\n\tmax-height: {{$:/themes/welford/phasersonkill/metrics/searchheight}};\r\n}\n\n.topsearchform  { display:inline; padding:0; margin:0;}\n\n/* \r\nsmall screen differences \r\n*/\n\n@media (max-width: {{$:/themes/welford/phasersonkill/metrics/sidebarbreakpoint}} ) \r\n{\r\n\t.tc-sidebar-header\t\t{ display:none;}\t\r\n\t.largescreen-only\t{ display:none; }\t\r\n\t.special-search .tc-reveal .tc-search-results, .hacky-buffer .tc-reveal .tc-search-results { \r\n\t\twidth: 100%;\r\n\t\tright: {{$:/themes/welford/phasersonkill/metrics/menuwidth}}; \r\n\t\topacity:0.93;\r\n\t}\t\t\n\n\t/* width with sidebar no shown */\r\n\tbody.tc-body .tc-tiddler-frame\t{ padding: 0; }\r\n}\n\n/* \r\nlarger screen differences \r\n*/\n\n@media (min-width: {{$:/themes/welford/phasersonkill/metrics/sidebarbreakpoint}}) {\n\n\t/* Move the sidebar up so that the title lines up */\r\n\tbody.tc-body .tc-sidebar-scrollable {\r\n\t\tposition: fixed;\r\n\t\tleft : auto;\r\n\t\tmargin:0;\r\n\t\ttop:{{$:/themes/welford/phasersonkill/metrics/headerheight}};\r\n\t\twidth:{{$:/themes/welford/phasersonkill/metrics/menuwidth}};\r\n\t\tpadding: 0 0 0 20px;\r\n\t\tbackground-color:{{$:/themes/welford/phasersonkill/metrics/sidebarcolour}};\r\n\t}\n\n\t.tc-pagetop { \r\n\t\t/*line-height:{{$:/themes/welford/phasersonkill/metrics/headerheight}};\r\n\t\tvertical-align:middle;*/\r\n\t}\n\n\t.tc-story-river { \r\n\t right: {{$:/themes/welford/phasersonkill/metrics/menuwidth}}; \r\n\t position: absolute;\r\n\t}\t\n\n\t.special-search .tc-reveal .tc-search-results, .hacky-buffer .tc-reveal .tc-search-results { \r\n\t width: 100%;\r\n\t right: {{$:/themes/welford/phasersonkill/metrics/menuwidth}}; \r\n\t opacity:0.93;\r\n\t}\n\n\t/* Stop the tiddler info panel from bleeding into the tiddler frame padding */\r\n\tbody.tc-body .tc-tiddler-info { margin: 0; }\n\n\t/* Stop message boxes from bleeding into the tiddler frame padding */\r\n\tbody.tc-body .tc-message-box { margin: 21px 0 21px 0; }\n\n\t/* Hide smallscreen only stuff */\r\n\t.smallscreen-only\t{ display:none;}\t\n\n\t/* width with sidebar shown */\r\n\tbody.tc-body .tc-tiddler-frame\t{ padding: 0 20px 0 0; }\r\n}\n\n@media (min-width: {{$:/themes/welford/phasersonkill/metrics/maxwidth}}) {\r\n\t/* above max width don't move the sidebar anymore */\r\n\tbody.tc-body .tc-sidebar-scrollable {\t\t\r\n\t\tleft: calc({{$:/themes/welford/phasersonkill/metrics/maxwidth}} - {{$:/themes/welford/phasersonkill/metrics/menuwidth}});\r\n\t\twidth:auto;\r\n\t}\r\n}\r\nbutton.tc-tag-label, span.tc-tag-label{border-radius:3px;}\n&quot;
-        },
-        &quot;$:/core/images/cancel-button&quot;: {
-            &quot;title&quot;: &quot;$:/core/images/cancel-button&quot;,
-            &quot;tags&quot;: &quot;$:/tags/Image&quot;,
-            &quot;text&quot;: &quot;&lt;svg class=\&quot;tc-image-cancel-button tc-image-button\&quot; viewBox=\&quot;366 150 58 58\&quot; width=\&quot;22pt\&quot; height=\&quot;22pt\&quot;&gt;&lt;path d=\&quot;M 414.76236 158.98764 C 403.77887 148.0041 385.97113 148.0041 374.98764 158.98764 C 364.0041 169.97113 364.0041 187.77887 374.98764 198.76236 C 385.97113 209.7459 403.77887 209.7459 414.76236 198.76236 C 425.7459 187.77887 425.7459 169.97113 414.76236 158.98764 M 385.3967 165.32954 L 385.3967 165.32954 L 394.77674 174.7096 L 404.3533 165.13303 C 405.53068 163.95566 407.4396 163.95566 408.61697 165.13303 C 409.79434 166.31041 409.79434 168.21932 408.61697 169.39669 L 399.0404 178.97325 L 408.42046 188.35331 C 409.59783 189.53068 409.59783 191.43959 408.42046 192.61697 L 408.42046 192.61697 C 407.24308 193.79434 405.33417 193.79434 404.1568 192.61697 L 394.77675 183.23692 L 385.5932 192.42046 C 384.41583 193.59783 382.50692 193.59783 381.32954 192.42046 L 381.32954 192.42046 C 380.15217 191.24308 380.15217 189.33417 381.32954 188.1568 C 381.32954 188.1568 381.32954 188.1568 381.32954 188.1568 L 381.32954 188.1568 L 381.32954 188.1568 L 390.51309 178.97326 L 381.13303 169.5932 C 379.95566 168.41583 379.95566 166.50692 381.13303 165.32954 L 381.13303 165.32954 C 382.3104 164.15217 384.21932 164.15217 385.3967 165.32954 C 385.3967 165.32954 385.3967 165.32954 385.3967 165.32954 Z\&quot;/&gt;&lt;/svg&gt;&quot;
-        },
-        &quot;$:/core/images/close-button&quot;: {
-            &quot;title&quot;: &quot;$:/core/images/close-button&quot;,
-            &quot;tags&quot;: &quot;$:/tags/Image&quot;,
-            &quot;text&quot;: &quot;&lt;svg class=\&quot;tc-image-close-button tc-image-button\&quot; viewBox=\&quot;222 150 56 56\&quot; width=\&quot;22pt\&quot; height=\&quot;22pt\&quot;&gt;&lt;path d=\&quot;M 249.56668 185.88827 L 267.06757 203.38916 C 269.26427 205.58586 272.82582 205.58586 275.02252 203.38916 L 275.02252 203.38916 C 277.21922 201.19246 277.21922 197.63091 275.02252 195.43421 L 257.52163 177.93332 L 275.38916 160.06579 C 277.58586 157.86909 277.58586 154.30754 275.38916 152.11084 C 273.19246 149.91414 269.63091 149.91414 267.43421 152.11084 L 249.56668 169.97837 L 232.06579 152.47748 L 232.06579 152.47748 C 232.06579 152.47748 232.06579 152.47748 232.06579 152.47748 C 229.86909 150.28078 226.30754 150.28078 224.11084 152.47748 L 224.11084 152.47748 C 221.91414 154.674175 221.91414 158.23573 224.11084 160.43243 L 241.61173 177.93332 L 224.47748 195.06757 L 224.47748 195.06757 L 224.47748 195.06757 C 224.47748 195.06757 224.47748 195.06757 224.47748 195.06757 C 222.28078 197.26427 222.28078 200.82583 224.47748 203.02252 L 224.47748 203.02252 C 226.67418 205.21922 230.23573 205.21922 232.43243 203.02252 Z\&quot;/&gt;&lt;/svg&gt;&quot;
-        },
-        &quot;$:/core/images/done-button&quot;: {
-            &quot;title&quot;: &quot;$:/core/images/done-button&quot;,
-            &quot;tags&quot;: &quot;$:/tags/Image&quot;,
-            &quot;text&quot;: &quot;&lt;svg class=\&quot;tc-image-done-button tc-image-button\&quot; viewBox=\&quot;434 150 68 55\&quot; width=\&quot;22pt\&quot; height=\&quot;18pt\&quot;&gt;&lt;path d=\&quot;M 438.49266 178.00797 L 439.00744 177.49319 C 441.35054 175.15008 445.14946 175.15004 447.49262 177.49309 L 452.50734 182.50757 C 454.8505 184.85063 458.6494 184.85058 460.99252 182.50748 L 488.50747 154.99255 C 490.85058 152.64944 494.6495 152.6494 496.99266 154.99246 L 497.50722 155.506995 C 499.8504 157.85009 499.8505 161.64908 497.5074 163.99228 C 497.50738 163.99229 497.50736 163.99231 497.50734 163.99233 L 460.9926 200.5077 C 458.64947 202.85087 454.85048 202.8509 452.50732 200.50778 C 452.5073 200.50777 452.5073 200.50777 452.5073 200.50776 L 438.49268 186.49327 C 436.14952 184.15013 436.1495 180.35114 438.49264 178.00799 C 438.49265 178.00798 438.49265 178.00797 438.49266 178.00797 Z\&quot;/&gt;&lt;/svg&gt;&quot;
-        },
-        &quot;$:/core/images/edit-button&quot;: {
-            &quot;title&quot;: &quot;$:/core/images/edit-button&quot;,
-            &quot;tags&quot;: &quot;$:/tags/Image&quot;,
-            &quot;text&quot;: &quot;&lt;svg class=\&quot;tc-image-edit-button tc-image-button\&quot; viewBox=\&quot;244 193 20 22\&quot; width=\&quot;20pt\&quot; height=\&quot;22pt\&quot;&gt;&lt;path d=\&quot;M 257.33334 196.80951 L 245.90476 207.2857 L 244 212.0476 L 248.7619 210.14284 L 260.19048 199.66665 Z M 259.2381 194.90475 L 258.28566 195.85716 L 261.14284 198.71428 L 262.09522 197.76187 Z M 261.14286 193 L 260.19042 193.95241 L 263.04762 196.80953 L 264 195.85714 Z M 244 213.72882 C 244 213.72882 247.4281 215.43353 250.8572 213.7288 C 254.28599 212.02405 261.14284 214.86531 261.14284 214.86531 L 261.14284 213.72884 C 261.14284 213.72884 254.28577 210.88755 250.8572 212.5923 C 247.42858 214.29712 244 212.59228 244 212.59228 Z\&quot;/&gt;&lt;/svg&gt;&quot;
-        },
-        &quot;$:/core/images/new-button&quot;: {
-            &quot;title&quot;: &quot;$:/core/images/new-button&quot;,
-            &quot;tags&quot;: &quot;$:/tags/Image&quot;,
-            &quot;text&quot;: &quot;&lt;svg class=\&quot;tc-image-new-button tc-image-button\&quot; viewBox=\&quot;83 81 50 50\&quot; width=\&quot;22pt\&quot; height=\&quot;22pt\&quot;&gt;&lt;path d=\&quot;M 101.25 112.5 L 101.25 127.5 C 101.25 127.5 101.25 127.5 101.25 127.5 L 101.25 127.5 C 101.25 129.156855 102.593146 130.5 104.25 130.5 L 111.75 130.5 C 113.406854 130.5 114.75 129.156854 114.75 127.5 L 114.75 112.5 L 129.75 112.5 C 131.406854 112.5 132.75 111.156854 132.75 109.5 L 132.75 102 C 132.75 100.343146 131.406854 99 129.75 99 L 114.75 99 L 114.75 84 C 114.75 82.343146 113.406854 81 111.75 81 L 104.25 81 C 104.25 81 104.25 81 104.25 81 C 102.593146 81 101.25 82.343146 101.25 84 L 101.25 99 L 86.25 99 C 86.25 99 86.25 99 86.25 99 C 84.593146 99 83.25 100.343146 83.25 102 L 83.25 109.5 C 83.25 109.5 83.25 109.5 83.25 109.5 L 83.25 109.5 C 83.25 111.156855 84.593146 112.5 86.25 112.5 Z\&quot;/&gt;&lt;/svg&gt;&quot;
-        },
-        &quot;$:/core/images/options-button&quot;: {
-            &quot;title&quot;: &quot;$:/core/images/options-button&quot;,
-            &quot;tags&quot;: &quot;$:/tags/Image&quot;,
-            &quot;text&quot;: &quot;&lt;svg class=\&quot;tc-image-options-button tc-image-button\&quot; viewBox=\&quot;434 218 68 68\&quot; width=\&quot;22pt\&quot; height=\&quot;22pt\&quot;&gt;&lt;path d=\&quot;M 478.39696 232.53705 L 478.39696 232.53705 C 477.11453 231.85132 475.77877 231.30146 474.4106 230.88735 L 474.4106 218.24993 L 461.58944 218.24993 L 461.58944 230.88735 C 460.22126 231.30146 458.8855 231.85132 457.60308 232.53705 L 448.66825 223.60214 L 439.6022 232.66814 L 448.53716 241.60304 C 447.8515 242.88541 447.30158 244.22116 446.88747 245.58935 L 434.25 245.58935 L 434.25 258.41052 L 446.88747 258.41052 C 447.30158 259.7787 447.8515 261.11446 448.53716 262.39689 L 439.6022 271.33173 L 448.66825 280.39779 L 457.60308 271.46281 C 458.8855 272.14862 460.22126 272.69847 461.58944 273.11251 L 461.58944 285.74986 L 474.4106 285.74986 L 474.4106 273.11251 C 475.77877 272.69847 477.11453 272.14862 478.39696 271.46281 L 487.3318 280.39779 L 496.3977 271.33173 L 487.46287 262.39689 C 488.14854 261.11446 488.6984 259.7787 489.11257 258.41052 L 501.7499 258.41052 L 501.7499 245.58935 L 489.11257 245.58935 C 488.6984 244.22116 488.14854 242.88541 487.46287 241.60304 L 496.3977 232.66814 L 487.3318 223.60214 Z M 475.3328 244.66714 C 479.38253 248.71698 479.38253 255.2829 475.3328 259.33273 C 471.28297 263.3826 464.71706 263.3826 460.66723 259.33273 C 456.61737 255.2829 456.61737 248.71698 460.66723 244.66714 C 464.71706 240.61734 471.28297 240.61734 475.3328 244.66714\&quot;/&gt;&lt;/svg&gt;&quot;
-        },
-        &quot;$:/core/images/save-button&quot;: {
-            &quot;title&quot;: &quot;$:/core/images/save-button&quot;,
-            &quot;tags&quot;: &quot;$:/tags/Image&quot;,
-            &quot;text&quot;: &quot;&lt;svg class=\&quot;tc-image-save-button tc-image-button\&quot; viewBox=\&quot;4 512 64 60\&quot; width=\&quot;22pt\&quot; height=\&quot;21pt\&quot;&gt;&lt;path d=\&quot;M 13.5 537.75 L 11.5 537.75 C 11.5 537.75 11.5 537.75 11.5 537.75 C 7.6340064 537.75 4.4999994 540.884 4.5 544.75 L 4.5 564.5 L 4.5 564.5 C 4.5 564.5 4.5 564.5 4.5 564.5 L 4.5 564.5 C 4.5000006 568.366 7.634007 571.5 11.5 571.5 L 60.5 571.5 C 64.365993 571.5 67.5 568.366 67.5 564.5 L 67.5 544.75 C 67.5 540.884 64.365993 537.75 60.5 537.75 L 58.5 537.75 L 49.5 546.75 L 50 546.75 C 52.20914 546.75 54 548.54086 54 550.75 L 54 556.25 C 54 558.45914 52.20914 560.25 50 560.25 L 36 560.25 L 22 560.25 C 19.790861 560.25 18 558.45914 18 556.25 L 18 556.25 C 18 556.25 18 556.25 18 556.25 L 18 550.75 C 18 548.54086 19.790861 546.75 22 546.75 C 22 546.75 22 546.75 22 546.75 L 22.5 546.75 Z\&quot;/&gt;&lt;path d=\&quot;M 16.37132 533.87132 L 33.87868 551.37868 C 35.050253 552.55025 36.949747 552.55025 38.12132 551.37868 L 55.62868 533.87132 C 56.800252 532.69975 56.800252 530.80025 55.62868 529.62868 C 55.06607 529.06607 54.30301 528.75 53.50736 528.75 L 48 528.75 C 46.343146 528.75 45 527.40685 45 525.75 L 45 516 C 45 514.34315 43.656854 513 42 513 L 30 513 C 28.343146 513 27 514.34315 27 516 L 27 525.75 C 27 527.40685 25.656854 528.75 24 528.75 L 18.492641 528.75 C 16.835786 528.75 15.492641 530.09315 15.492641 531.75 C 15.492641 532.54565 15.808711 533.3087 16.37132 533.87132 Z\&quot;/&gt;&lt;/svg&gt;&quot;
-        },
-        &quot;$:/themes/welford/phasersonkill/metrics/headerfontcolour&quot;: {
-            &quot;title&quot;: &quot;$:/themes/welford/phasersonkill/metrics/headerfontcolour&quot;,
-            &quot;text&quot;: &quot;#F00&quot;
-        },
-        &quot;$:/themes/welford/phasersonkill/metrics/headerbgcolour&quot;: {
-            &quot;title&quot;: &quot;$:/themes/welford/phasersonkill/metrics/headerbgcolour&quot;,
-            &quot;text&quot;: &quot;#eee&quot;
-        },
-        &quot;$:/themes/welford/phasersonkill/metrics/headerheight&quot;: {
-            &quot;title&quot;: &quot;$:/themes/welford/phasersonkill/metrics/headerheight&quot;,
-            &quot;text&quot;: &quot;30px&quot;
-        },
-        &quot;$:/themes/welford/phasersonkill/metrics/menuwidth&quot;: {
-            &quot;title&quot;: &quot;$:/themes/welford/phasersonkill/metrics/menuwidth&quot;,
-            &quot;text&quot;: &quot;450px&quot;
-        },
-        &quot;$:/themes/welford/phasersonkill/metrics/border&quot;: {
-            &quot;title&quot;: &quot;$:/themes/welford/phasersonkill/metrics/border&quot;,
-            &quot;text&quot;: &quot;20px&quot;
-        },
-        &quot;$:/themes/welford/phasersonkill/metrics/searchheight&quot;: {
-            &quot;title&quot;: &quot;$:/themes/welford/phasersonkill/metrics/searchheight&quot;,
-            &quot;text&quot;: &quot;200px&quot;
-        },
-        &quot;$:/themes/welford/phasersonkill/metrics/sidebarcolour&quot;: {
-            &quot;title&quot;: &quot;$:/themes/welford/phasersonkill/metrics/sidebarcolour&quot;,
-            &quot;text&quot;: &quot;transparent&quot;
-        },
-        &quot;$:/themes/welford/phasersonkill/metrics/titlebordercolour&quot;: {
-            &quot;title&quot;: &quot;$:/themes/welford/phasersonkill/metrics/titlebordercolour&quot;,
-            &quot;text&quot;: &quot;#eee&quot;
-        },
-        &quot;$:/themes/welford/phasersonkill/metrics/sidebarbreakpoint&quot;: {
-            &quot;title&quot;: &quot;$:/themes/welford/phasersonkill/metrics/sidebarbreakpoint&quot;,
-            &quot;text&quot;: &quot;1180px&quot;
-        },
-        &quot;$:/themes/welford/phasersonkill/metrics/maxwidth&quot;: {
-            &quot;title&quot;: &quot;$:/themes/welford/phasersonkill/metrics/maxwidth&quot;,
-            &quot;text&quot;: &quot;1681px&quot;
-        },
-        &quot;$:/themes/welford/phasersonkill/PageTop&quot;: {
-            &quot;created&quot;: &quot;20140629173226803&quot;,
-            &quot;modified&quot;: &quot;20140629173456183&quot;,
-            &quot;tags&quot;: &quot;$:/tags/PageTemplate&quot;,
-            &quot;title&quot;: &quot;$:/themes/welford/phasersonkill/PageTop&quot;,
-            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
-            &quot;text&quot;: &quot;\\define config-title()\r\n$:/config/PageControlButtons/Visibility/$(listItem)$\r\n\\end\r\n&lt;div class=\&quot;tc-pagetop\&quot;&gt;\r\n\t&lt;b&gt;{{$:/SiteTitle}}&lt;/b&gt; \r\n\t&lt;$edit-text tiddler=\&quot;$:/temp/topsearch\&quot; type=\&quot;search\&quot; tag=\&quot;input\&quot; accesskey=\&quot;q\&quot; id=\&quot;topsearch\&quot; /&gt;\r\n\t&lt;$list filter=\&quot;[all[shadows+tiddlers]tag[$:/tags/PageControls]!has[draft.of]]\&quot; variable=\&quot;listItem\&quot;&gt;\r\n\t\t&lt;$reveal type=\&quot;nomatch\&quot; state=&lt;&lt;config-title&gt;&gt; text=\&quot;hide\&quot;&gt;\r\n\t\t\t&lt;$transclude tiddler=&lt;&lt;listItem&gt;&gt; mode=\&quot;inline\&quot;/&gt;\r\n\t\t&lt;/$reveal&gt;\r\n\t&lt;/$list&gt;\r\n&lt;/div&gt;\n\n&lt;div class=\&quot;special-search\&quot;&gt;\r\n{{$:/themes/welford/phasersonkill/SearchResults}}\r\n&lt;/div&gt;&quot;
-        },
-        &quot;$:/themes/welford/phasersonkill/SearchPadding&quot;: {
-            &quot;created&quot;: &quot;20140629173226803&quot;,
-            &quot;modified&quot;: &quot;20140629173456183&quot;,
-            &quot;tags&quot;: &quot;$:/tags/StoryBackdrop&quot;,
-            &quot;title&quot;: &quot;$:/themes/welford/phasersonkill/SearchPadding&quot;,
-            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
-            &quot;text&quot;: &quot;&lt;div class=\&quot;hacky-buffer\&quot;&gt;{{$:/themes/welford/phasersonkill/SearchResults}}&lt;/div&gt;&quot;
-        },
-        &quot;$:/themes/welford/phasersonkill/SearchResults&quot;: {
-            &quot;created&quot;: &quot;20140629173226803&quot;,
-            &quot;modified&quot;: &quot;20140629173456183&quot;,
-            &quot;title&quot;: &quot;$:/themes/welford/phasersonkill/SearchResults&quot;,
-            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
-            &quot;text&quot;: &quot;&lt;$reveal state=\&quot;$:/temp/topsearch\&quot; type=\&quot;nomatch\&quot; text=\&quot;\&quot;&gt;\r\n&lt;$scrollable class='tc-scrollable tc-search-results'&gt;\r\n&lt;small&gt;&lt;$count filter=\&quot;[!is[system]search{$:/temp/topsearch}]\&quot;/&gt; matches&lt;/small&gt;\r\n&lt;!-- TWexe stuff first --&gt;\r\n&lt;$list filter=\&quot;[!is[system]search{$:/temp/topsearch}tag[$:/tags/twexe]sort[title]limit[20]]\&quot; template=\&quot;$:/themes/welford/phasersonkill/TWexeTemplate\&quot;/&gt;\r\n&lt;!-- Normal Search Second stuff first (includes --&gt;\r\n&lt;$list filter=\&quot;[!is[system]search{$:/temp/topsearch}sort[title]limit[250]]\&quot; template=\&quot;$:/core/ui/ListItemTemplate\&quot;/&gt;\r\n&lt;small class=\&quot;displayblock\&quot;&gt;&lt;$linkcatcher to=\&quot;$:/temp/topsearch\&quot;&gt;&lt;$link to=\&quot;\&quot;&gt;close search results&lt;/$link&gt;&lt;/$linkcatcher&gt;&lt;/small&gt;\r\n&lt;/$scrollable&gt;\r\n&lt;span class=\&quot;tc-pagetop-close-search\&quot;&gt;&lt;$linkcatcher to=\&quot;$:/temp/topsearch\&quot;&gt;&lt;$link to=\&quot;\&quot; class=\&quot;btn-invisible\&quot;&gt;{{$:/core/images/close-button}}&lt;/$link&gt;&lt;/$linkcatcher&gt;&lt;/span&gt;\r\n&lt;/$reveal&gt;&quot;
-        },
-        &quot;$:/themes/welford/phasersonkill/ThemeTweaks&quot;: {
-            &quot;title&quot;: &quot;$:/themes/welford/phasersonkill/ThemeTweaks&quot;,
-            &quot;tags&quot;: &quot;$:/tags/ControlPanel/Appearance&quot;,
-            &quot;caption&quot;: &quot;PhasersOnKill Tweaks&quot;,
-            &quot;text&quot;: &quot;You can tweak certain aspects of the ''PhasersOnKill'' theme.\n\n//Take care to preserve any backticks (&amp;#96;) in the settings//\n\n! Sizes\n\n* Header Height: &lt;$edit-text tiddler=\&quot;$:/themes/welford/phasersonkill/metrics/headerheight\&quot; default=\&quot;\&quot; tag=\&quot;input\&quot;/&gt;\r\n* Menu Width: &lt;$edit-text tiddler=\&quot;$:/themes/welford/phasersonkill/metrics/menuwidth\&quot; default=\&quot;\&quot; tag=\&quot;input\&quot;/&gt;\r\n* Header Colour: &lt;$edit-text tiddler=\&quot;$:/themes/welford/phasersonkill/metrics/headerbgcolour\&quot; default=\&quot;\&quot; tag=\&quot;input\&quot;/&gt;\r\n* Header Font Colour: &lt;$edit-text tiddler=\&quot;$:/themes/welford/phasersonkill/metrics/headerfontcolour\&quot; default=\&quot;\&quot; tag=\&quot;input\&quot;/&gt;\r\n* Border: &lt;$edit-text tiddler=\&quot;$:/themes/welford/phasersonkill/metrics/border\&quot; default=\&quot;\&quot; tag=\&quot;input\&quot;/&gt;\r\n* Search height: &lt;$edit-text tiddler=\&quot;$:/themes/welford/phasersonkill/metrics/searchheight\&quot; default=\&quot;\&quot; tag=\&quot;input\&quot;/&gt;\r\n* Side Bar Colour: &lt;$edit-text tiddler=\&quot;$:/themes/welford/phasersonkill/metrics/sidebarcolour\&quot; default=\&quot;\&quot; tag=\&quot;input\&quot;/&gt;\r\n* Title Border Colour: &lt;$edit-text tiddler=\&quot;$:/themes/welford/phasersonkill/metrics/titlebordercolour\&quot; default=\&quot;\&quot; tag=\&quot;input\&quot;/&gt;\r\n* Sidebar Break Point: &lt;$edit-text tiddler=\&quot;$:/themes/welford/phasersonkill/metrics/sidebarbreakpoint\&quot; default=\&quot;\&quot; tag=\&quot;input\&quot;/&gt;&quot;
-        },
-        &quot;$:/temp/topsearch&quot;: {
-            &quot;created&quot;: &quot;20140629173226803&quot;,
-            &quot;modified&quot;: &quot;20140629173456183&quot;,
-            &quot;title&quot;: &quot;$:/temp/topsearch&quot;,
-            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
-            &quot;text&quot;: &quot;&quot;
-        },
-        &quot;$:/themes/welford/phasersonkill/TWexeTemplate&quot;: {
-            &quot;created&quot;: &quot;20140629173226803&quot;,
-            &quot;modified&quot;: &quot;20140629173456183&quot;,
-            &quot;title&quot;: &quot;$:/themes/welford/phasersonkill/TWexeTemplate&quot;,
-            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
-            &quot;text&quot;: &quot;&lt;div class=\&quot;tc-menu-list-item\&quot;&gt;\r\n&lt;$twexe/&gt;\r\n&lt;/div&gt;&quot;
-        }
-    }
-}</pre>
-</div>
-<div author="James.W.Anderson" bag="default" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla $:/themes/welford/phasersonkill" description="custom static theme based on Seamless" name="PhasersOnKillStatic" plugin-type="theme" revision="0" title="$:/themes/welford/phasersonkill-static" type="application/json" version="5.1.8-prerelease">
+<div author="James.W.Anderson" bag="default" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="custom static theme based on Seamless" name="PhasersOnKillStatic" plugin-type="theme" revision="0" title="$:/themes/welford/phasersonkill-static" type="application/json" version="5.1.8-prerelease">
 <pre>{
     &quot;tiddlers&quot;: {
         &quot;$:/core/ui/ViewTemplate/subtitle&quot;: {
@@ -5677,8 +5543,8 @@ Error message and password prompt
         &quot;$:/themes/welford/phasersonkill-static/base&quot;: {
             &quot;title&quot;: &quot;$:/themes/welford/phasersonkill-static/base&quot;,
             &quot;tags&quot;: &quot;[[$:/tags/Stylesheet]]&quot;,
-            &quot;list-after&quot;: &quot;$:/themes/welford/phasersonkill/base&quot;,
-            &quot;text&quot;: &quot;\\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline\n\n/*stops the scrollbar screwning things up by forcing it on all the time*/\r\nhtml {\r\n overflow-y:scroll;\r\n max-width:none;\r\n}\n\n.tc-story-river {\r\n\tposition: relative;\r\n\tright: auto;\r\n\tleft: auto;\r\n\twidth: auto;\r\n\tmax-width: 900px;\r\n\theight: 100%;\r\n\ttop: 10px;\r\n\tmargin: 0 auto;\r\n\tbackground-color: #fff;\r\n\tpadding: 30px 0;\r\n}\n\n@media (max-width: 900px) {\r\n\t.tc-story-river {\r\n\t\tmargin-left: 10px;\r\n\t}\r\n}\n\n.outer {\r\n\twidth: 100%;\r\n}\n\n.inner {\r\n\tposition: relative;\r\n\tmax-width: 900px;\r\n\tpadding: 1px 1px;\r\n\tmargin: 0 auto;\r\n}\n\n/*\r\nstop tiddly links screwing us n the banner\r\n*/\r\n.inner * a.tc-tiddlylink, .inner * a.tc-tiddlylink-missing{\r\n\tfont-style: normal; \r\n\ttext-decoration: none;\r\n\tfont-weight: normal;\r\n\tcolor: inherit;\r\n}\n\n#banner {\r\n\tz-index: 98;\r\n\tposition: fixed;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n\tmax-height: 2.32em;\r\n\tmargin: 0 auto;\r\n\tbackground-color: #000;\r\n\toverflow: hidden;\r\n}\r\n/*background-color:rgb(152, 44, 138);\nbackground-color: rgb(255, 0, 87); */\n\n.banner-mob-title, .banner-title {\r\n\tfont-family: Helvetica, Arial, \&quot;Lucida Grande\&quot;, sans-serif;\r\n\tpadding: 0px 0px 0px 5px;\r\n\tposition: relative;\r\n\tmargin: 0 auto;\r\n\tfont-size: 2.2em;\r\n\tline-height: 100%;\r\n\tbackground-color: rgb(255, 0, 87);\r\n\tborder-top-left-radius: 13px;\r\n\tborder-bottom-right-radius: 13px;\r\n\tcolor: white;\r\n\tmargin-right: 10px;\r\n}\n\n.banner-spacer {\r\n\tfont-size: 2.2em;\r\n\tcolor:white;\r\n}\n\n.banner-info, .banner-tags {\r\n\tborder-top-right-radius: 11px;\r\n\tfont-family: Helvetica, Arial, \&quot;Lucida Grande\&quot;, sans-serif;\r\n\tposition: relative;\r\n\tmargin: 0;\r\n\tfont-size: 2.2em;\r\n\tline-height: 100%;\r\n\tcolor: rgb(255, 0, 87);\r\n}\n\n.banner-info {\r\n}\n\n.banner-tags {\r\n}\n\n.lower-text {\r\n\tposition: relative;\r\n\tbottom: 0;\r\n}\n\n.banner-subtitle {\r\n\twidth: 100%;\r\n\tcolor: white;\r\n\tpadding-left: 10px;\r\n}\n\n.banner-image0{\r\n\tvertical-align: bottom;\r\n\tposition:absolute;\r\n\tright:45px;\t\r\n\theight:32px;\r\n\twidth:32px;\r\n}\n\n.banner-image1{\r\n\tvertical-align: bottom;\r\n\tposition:absolute;\r\n\tright:10px;\r\n\theight:32px;\r\n\twidth:32px;\r\n}\n\n@media (max-device-width: 549px) {\r\n\t.banner-title {\r\n\t\tdisplay: none;\r\n\t}\t\r\n}\n\n@media (max-device-width: 425px) {\t\r\n\t.banner-image0,.banner-image1{\r\n\t\tdisplay:none;\r\n\t}\t\r\n}\n\n\n\n@media (max-device-width: 702px) {\r\n\t.banner-subtitle {\r\n\t\tdisplay: none;\r\n\t}\t\r\n}\n\n@media (min-device-width: 550px) {\r\n\t.banner-mob-title {\r\n\t\tdisplay: none;\r\n\t}\r\n}\n\n.tc-body &gt; p{\r\n\tdisplay: None;\r\n}\n\n.tc-dropzone &gt; p, .tc-story-river &gt; p:nth-of-type(1) { display:none; }\n\nbody.tc-body {\r\n\tbackground-color: #fff;\r\n}\n\nbody.tc-body .tc-tiddler-frame {\r\n\tpadding: 0;\r\n\twidth: auto;\r\n}\n\n.tc-title {\r\n\ttext-shadow: 2px 2px 2px #ccc;\r\n}\n\n.tc-titlebar h2 {\r\n\tfont-size: 1.3em;\r\n}\n\n.tc-tiddler-title {\r\n\tborder-bottom: #ddd 1px solid;\r\n}\r\n.tc-menu-list-subitem {\r\npadding-left: 15px;\r\n}\n\n/* undo some funky business from phasersonkill */\n\n@media (min-width: {{$:/themes/welford/phasersonkill/metrics/maxwidth}}) {\r\n\t/* above max width don't move the sidebar anymore */\r\n\tbody.tc-body .tc-sidebar-scrollable {\t\t\r\n\t\tleft:auto;\r\n\t\twidth:auto;\r\n\t}\r\n}\n\n.taglink.tc-tiddlylink{\r\ncolor:transparent; \r\n}\r\n.banner-img{\r\ndisplay:inline;\r\n}\r\n.long-links{\r\nwhite-space:pre-line;\r\n}&quot;
+            &quot;list-after&quot;: &quot;$:/themes/tiddlywiki/vanilla/base&quot;,
+            &quot;text&quot;: &quot;\\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline\n\n/*\r\nRules copied from Snow White---------------------------------------------\r\n*/\n\n.tc-page-controls button svg, .tc-tiddler-controls button svg, .tc-topbar button svg {\r\n\t&lt;&lt;transition \&quot;fill 150ms ease-in-out\&quot;&gt;&gt;\r\n}\n\n.tc-tiddler-controls button.tc-selected svg {\r\n\t&lt;&lt;filter \&quot;drop-shadow(0px -1px 2px rgba(0,0,0,0.25))\&quot;&gt;&gt;\r\n}\n\n.tc-drop-down {\r\n\tborder-radius: 4px;\r\n\t&lt;&lt;box-shadow \&quot;2px 2px 10px rgba(0, 0, 0, 0.5)\&quot;&gt;&gt;\r\n}\n\n.tc-block-dropdown {\r\n\tborder-radius: 4px;\r\n\t&lt;&lt;box-shadow \&quot;2px 2px 10px rgba(0, 0, 0, 0.5)\&quot;&gt;&gt;\r\n}\n\n.tc-modal-displayed {\r\n\t-webkit-filter: blur(4px);\r\n}\n\n.tc-modal {\r\n\tborder-radius: 6px;\r\n\t&lt;&lt;box-shadow \&quot;0 3px 7px rgba(0,0,0,0.3)\&quot;&gt;&gt;\r\n}\n\n.tc-modal-footer {\r\n\tborder-radius: 0 0 6px 6px;\r\n\t&lt;&lt;box-shadow \&quot;inset 0 1px 0 #fff\&quot;&gt;&gt;;\r\n}\n\n.tc-alert {\r\n\tborder-radius: 6px;\r\n\t&lt;&lt;box-shadow \&quot;0 3px 7px rgba(0,0,0,0.6)\&quot;&gt;&gt;\r\n}\n\n.tc-notification {\r\n\tborder-radius: 6px;\r\n\t&lt;&lt;box-shadow \&quot;0 3px 7px rgba(0,0,0,0.3)\&quot;&gt;&gt;\r\n\ttext-shadow: 0 1px 0 rgba(255,255,255, 0.8);\r\n}\n\n.tc-message-box img {\r\n\t&lt;&lt;box-shadow \&quot;1px 1px 3px rgba(0,0,0,0.5)\&quot;&gt;&gt;\r\n}\n\n/*\r\nPhaserOnKill Stuff---------------------------------------------\r\n*/\n\nblockquote { border-left:2px dashed #DDD; margin-left:12px; }\n\n.block-indent { border:none; margin-left:0px; padding-left:15px; }\n\n/* page header */\r\ndiv.tc-pagetop { \r\n position:fixed;\r\n max-height:{{$:/themes/welford/phasersonkill/metrics/headerheight}};\r\n width: 100%;\r\n top : 0px;\r\n left : 0px;\r\n padding-left: 5px;  \r\n z-index: 98;\r\n background : {{$:/themes/welford/phasersonkill/metrics/headerbgcolour}}; !important; /* as background */\r\n overflow:hidden;\r\n vertical-align:middle;\r\n line-height:{{$:/themes/welford/phasersonkill/metrics/headerheight}}; \r\n opacity:0.93;\r\n box-shadow: #ccc 0px 1px 5px;\r\n}\n\n.tc-pagetop b { color:{{$:/themes/welford/phasersonkill/metrics/headerfontcolour}}; font-size:1.1em;}\n\n.tc-story-river {\r\n width: auto;\r\n height: 100%;\r\n left: 0px;\r\n top: {{$:/themes/welford/phasersonkill/metrics/headerheight}};\r\n padding: 0px 10px 0px 10px;\r\n margin: 0;\r\n background-color: #fff;\r}\n\n.tc-tiddler-frame .tc-tiddler-body {\r\n\tfont-size: {{$:/themes/tiddlywiki/vanilla/metrics/fontsize}};\r\n\tline-height: {{$:/themes/tiddlywiki/vanilla/metrics/lineheight}};\r\n}\n\n.tc-tiddler-frame {\r\n width:100%; \r\n}\n\n\r\n/* Use the tiddler background colour for the page background */\r\nhtml {max-width:{{$:/themes/welford/phasersonkill/metrics/maxwidth}};}\n\nhtml body.tc-body {\r\n\tbackground-color: &lt;&lt;colour background&gt;&gt;;\t\r\n}\n\nhtml:-webkit-full-screen {\r\n\tbackground-color: &lt;&lt;colour background&gt;&gt;;\r\n}\n\n/* Adjust the colour of the page controls */\r\nbody.tc-body .tc-page-controls svg {\r\n\tfill: &lt;&lt;colour muted-foreground&gt;&gt;;\r\n}\n\n/* Adjust the colour of the sidebar selected tabs */\r\nbody.tc-body .tc-sidebar-lists .tc-tab-buttons button.tc-tab-selected {\r\n\tbackground-color: &lt;&lt;colour background&gt;&gt;;\r\n}\n\n/* tiddler titles  */\r\n.tc-tiddler-title {\r\nborder-bottom: 1px solid {{$:/themes/welford/phasersonkill/metrics/titlebordercolour}};\r\n}\n\n/* stop the p tags form adding unwanted padding at the stop of the story river */\n\n.tc-dropzone &gt; p,  { margin:0px; padding:0px; }\n\n/* hide the reveal stuff for the sidebar*/\r\nspan.tc-topbar {display:none;}\n\n/* color and size of controls in topbar for smallscreen version */\r\n.tc-pagetop svg.tc-image-button {\r\npadding:0;\r\nmargin:0; \r\nfill:red;\r\nwidth:{{$:/themes/welford/phasersonkill/metrics/headerheight}};\r\nheight:{{$:/themes/welford/phasersonkill/metrics/headerheight}};\r\nvertical-align:middle;\r\n}\n\n.special-search .tc-reveal .tc-search-results, .hacky-buffer .tc-reveal .tc-search-results { \r\nposition : fixed;\r\ntop : {{$:/themes/welford/phasersonkill/metrics/headerheight}};\r\nleft : 0px;\t\r\npadding: 0px 10px 0px 10px;\r\nmargin: 0;\r\nbackground:  {{$:/themes/welford/phasersonkill/metrics/headerbgcolour}};\r\nz-index: 99;\r\nbox-shadow: 0px 10px 30px  {{$:/themes/welford/phasersonkill/metrics/headerbgcolour}};\r\nborder-top:1px dashed #ddd;\r\n}\n\n.hacky-buffer .tc-reveal{ display: block; }\r\n.hacky-buffer .tc-reveal .tc-search-results { position : static;}\n\n.topbar-hack { \r\n\theight : {{$:/themes/welford/phasersonkill/metrics/headerheight}};\r\n\tposition : static;\r\n}\n\n.tc-pagetop-close-search  svg { \r\nposition: fixed;\r\ntop : {{$:/themes/welford/phasersonkill/metrics/headerheight}};\r\nwidth:{{$:/themes/welford/phasersonkill/metrics/headerheight}};\r\nheight:{{$:/themes/welford/phasersonkill/metrics/headerheight}};\r\nz-index: 99;\r\n/* close search button */\r\nright: {{$:/themes/welford/phasersonkill/metrics/border}};\r\nmargin-top:5px;\r\n}\n\n.smallscreen-only .tc-reveal\t{display : block;}\r\n.displayblock\t\t\t\t\t{display : block;}\n\n\r\n.tc-scrollable {\t\r\n\tmax-height: {{$:/themes/welford/phasersonkill/metrics/searchheight}};\r\n}\n\n.topsearchform  { display:inline; padding:0; margin:0;}\n\n/* \r\nsmall screen differences \r\n*/\n\n@media (max-width: {{$:/themes/welford/phasersonkill/metrics/sidebarbreakpoint}} ) \r\n{\r\n\t.tc-sidebar-header\t\t{ display:none;}\t\r\n\t.largescreen-only\t{ display:none; }\t\r\n\t.special-search .tc-reveal .tc-search-results, .hacky-buffer .tc-reveal .tc-search-results { \r\n\t\twidth: 100%;\r\n\t\tright: {{$:/themes/welford/phasersonkill/metrics/menuwidth}}; \r\n\t\topacity:0.93;\r\n\t}\t\t\n\n\t/* width with sidebar no shown */\r\n\tbody.tc-body .tc-tiddler-frame\t{ padding: 0; }\r\n}\n\n/* \r\nlarger screen differences \r\n*/\n\n@media (min-width: {{$:/themes/welford/phasersonkill/metrics/sidebarbreakpoint}}) {\n\n\t/* Move the sidebar up so that the title lines up */\r\n\tbody.tc-body .tc-sidebar-scrollable {\r\n\t\tposition: fixed;\r\n\t\tleft : auto;\r\n\t\tmargin:0;\r\n\t\ttop:{{$:/themes/welford/phasersonkill/metrics/headerheight}};\r\n\t\twidth:{{$:/themes/welford/phasersonkill/metrics/menuwidth}};\r\n\t\tpadding: 0 0 0 20px;\r\n\t\tbackground-color:{{$:/themes/welford/phasersonkill/metrics/sidebarcolour}};\r\n\t}\n\n\t.tc-pagetop { \r\n\t\t/*line-height:{{$:/themes/welford/phasersonkill/metrics/headerheight}};\r\n\t\tvertical-align:middle;*/\r\n\t}\n\n\t.tc-story-river { \r\n\t right: {{$:/themes/welford/phasersonkill/metrics/menuwidth}}; \r\n\t position: absolute;\r\n\t}\t\n\n\t.special-search .tc-reveal .tc-search-results, .hacky-buffer .tc-reveal .tc-search-results { \r\n\t width: 100%;\r\n\t right: {{$:/themes/welford/phasersonkill/metrics/menuwidth}}; \r\n\t opacity:0.93;\r\n\t}\n\n\t/* Stop the tiddler info panel from bleeding into the tiddler frame padding */\r\n\tbody.tc-body .tc-tiddler-info { margin: 0; }\n\n\t/* Stop message boxes from bleeding into the tiddler frame padding */\r\n\tbody.tc-body .tc-message-box { margin: 21px 0 21px 0; }\n\n\t/* Hide smallscreen only stuff */\r\n\t.smallscreen-only\t{ display:none;}\t\n\n\t/* width with sidebar shown */\r\n\tbody.tc-body .tc-tiddler-frame\t{ padding: 0 20px 0 0; }\r\n}\n\n@media (min-width: {{$:/themes/welford/phasersonkill/metrics/maxwidth}}) {\r\n\t/* above max width don't move the sidebar anymore */\r\n\tbody.tc-body .tc-sidebar-scrollable {\t\t\r\n\t\tleft: calc({{$:/themes/welford/phasersonkill/metrics/maxwidth}} - {{$:/themes/welford/phasersonkill/metrics/menuwidth}});\r\n\t\twidth:auto;\r\n\t}\r\n}\r\nbutton.tc-tag-label, span.tc-tag-label{border-radius:3px;}\n\n/*stops the scrollbar screwning things up by forcing it on all the time*/\r\nhtml {\r\n overflow-y:scroll;\r\n max-width:none;\r\n}\n\n.tc-story-river {\r\n\tposition: relative;\r\n\tright: auto;\r\n\tleft: auto;\r\n\twidth: auto;\r\n\tmax-width: 900px;\r\n\theight: 100%;\r\n\ttop: 10px;\r\n\tmargin: 0 auto;\r\n\tbackground-color: #fff;\r\n\tpadding: 30px 0;\r\n}\n\n@media (max-width: 900px) {\r\n\t.tc-story-river {\r\n\t\tmargin-left: 10px;\r\n\t}\r\n}\n\n.outer {\r\n\twidth: 100%;\r\n}\n\n.inner {\r\n\tposition: relative;\r\n\tmax-width: 900px;\r\n\tpadding: 1px 1px;\r\n\tmargin: 0 auto;\r\n}\n\n/*\r\nstop tiddly links screwing us n the banner\r\n*/\r\n.inner * a.tc-tiddlylink, .inner * a.tc-tiddlylink-missing{\r\n\tfont-style: normal; \r\n\ttext-decoration: none;\r\n\tfont-weight: normal;\r\n\tcolor: inherit;\r\n}\n\n#banner {\r\n\tz-index: 98;\r\n\tposition: fixed;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n\tmax-height: 2.32em;\r\n\tmargin: 0 auto;\r\n\tbackground-color: #000;\r\n\toverflow: hidden;\r\n}\r\n/*background-color:rgb(152, 44, 138);\r\nbackground-color: rgb(255, 0, 87); */\n\n.banner-mob-title, .banner-title {\r\n\tfont-family: Helvetica, Arial, \&quot;Lucida Grande\&quot;, sans-serif;\r\n\tpadding: 0px 0px 0px 5px;\r\n\tposition: relative;\r\n\tmargin: 0 auto;\r\n\tfont-size: 2.2em;\r\n\tline-height: 100%;\r\n\tbackground-color: rgb(255, 0, 87);\r\n\tborder-top-left-radius: 13px;\r\n\tborder-bottom-right-radius: 13px;\r\n\tcolor: white;\r\n\tmargin-right: 10px;\r\n}\n\n.banner-spacer {\r\n\tfont-size: 2.2em;\r\n\tcolor:white;\r\n}\n\n.banner-info, .banner-tags {\r\n\tborder-top-right-radius: 11px;\r\n\tfont-family: Helvetica, Arial, \&quot;Lucida Grande\&quot;, sans-serif;\r\n\tposition: relative;\r\n\tmargin: 0;\r\n\tfont-size: 2.2em;\r\n\tline-height: 100%;\r\n\tcolor: rgb(255, 0, 87);\r\n}\n\n.banner-info {\r\n}\n\n.banner-tags {\r\n}\n\n.lower-text {\r\n\tposition: relative;\r\n\tbottom: 0;\r\n}\n\n.banner-subtitle {\r\n\twidth: 100%;\r\n\tcolor: white;\r\n\tpadding-left: 10px;\r\n}\n\n.banner-image0{\r\n\tvertical-align: bottom;\r\n\tposition:absolute;\r\n\tright:45px;\t\r\n\theight:32px;\r\n\twidth:32px;\r\n}\n\n.banner-image1{\r\n\tvertical-align: bottom;\r\n\tposition:absolute;\r\n\tright:10px;\r\n\theight:32px;\r\n\twidth:32px;\r\n}\n\n@media (max-width: 569px) {\r\n\t.banner-title {\r\n\t\tdisplay: none;\r\n\t}\t\r\n}\n\n@media (max-width: 445px) {\t\r\n\t.banner-image0,.banner-image1{\r\n\t\tdisplay:none;\r\n\t}\t\r\n}\n\n\n\n@media (max-width: 702px) {\r\n\t.banner-subtitle {\r\n\t\tdisplay: none;\r\n\t}\t\r\n}\n\n@media (min-width: 570px) {\r\n\t.banner-mob-title {\r\n\t\tdisplay: none;\r\n\t}\r\n}\n\n.tc-body &gt; p{\r\n\tdisplay: None;\r\n}\n\n.tc-dropzone &gt; p, .tc-story-river &gt; p:nth-of-type(1) { display:none; }\n\nbody.tc-body {\r\n\tbackground-color: #fff;\r\n}\n\nbody.tc-body .tc-tiddler-frame {\r\n\tpadding: 0;\r\n\twidth: auto;\r\n}\n\n.tc-title {\r\n\ttext-shadow: 2px 2px 2px #ccc;\r\n}\n\n.tc-titlebar h2 {\r\n\tfont-size: 1.3em;\r\n}\n\n.tc-tiddler-title {\r\n\tborder-bottom: #ddd 1px solid;\r\n}\r\n.tc-menu-list-subitem {\r\npadding-left: 15px;\r\n}\n\n/* undo some funky business from phasersonkill */\n\n@media (min-width: {{$:/themes/welford/phasersonkill/metrics/maxwidth}}) {\r\n\t/* above max width don't move the sidebar anymore */\r\n\tbody.tc-body .tc-sidebar-scrollable {\t\t\r\n\t\tleft:auto;\r\n\t\twidth:auto;\r\n\t}\r\n}\n\n.taglink.tc-tiddlylink{\r\ncolor:transparent; \r\n}\r\n.banner-img{\r\ndisplay:inline;\r\n}\r\n.long-links{\r\nwhite-space:pre-line;\r\n}&quot;
         },
         &quot;$:/themes/welford/phasersonkill-static/linktopost&quot;: {
             &quot;title&quot;: &quot;$:/themes/welford/phasersonkill-static/linktopost&quot;,
@@ -5703,7 +5569,7 @@ Error message and password prompt
         &quot;$:/core/ui/ViewTemplate/tags&quot;: {
             &quot;tags&quot;: &quot;$:/tags/ViewTemplate&quot;,
             &quot;title&quot;: &quot;$:/core/ui/ViewTemplate/tags&quot;,
-            &quot;text&quot;: &quot;&lt;div class=\&quot;tc-tags-wrapper\&quot;&gt;\n&lt;$list filter=\&quot;[all[current]tags[]sort[title]]-[[hidden tags]tags[]]\&quot;&gt;\n&lt;$link class=\&quot;taglink\&quot; to={{!!title}} taglink=\&quot;true\&quot;&gt;&lt;$transclude tiddler=\&quot;$:/core/ui/TagTemplate\&quot;/&gt;&lt;/$link&gt;&lt;/$list&gt;\n&lt;/div&gt;&quot;
+            &quot;text&quot;: &quot;&lt;div class=\&quot;tc-tags-wrapper\&quot;&gt;\r\n&lt;$list filter=\&quot;[all[current]tags[]sort[title]]-[[hidden tags]tags[]]\&quot;&gt;\r\n&lt;$link class=\&quot;taglink\&quot; to={{!!title}} taglink=\&quot;true\&quot;&gt;&lt;$transclude tiddler=\&quot;$:/core/ui/TagTemplate\&quot;/&gt;&lt;/$link&gt;&lt;/$list&gt;\r\n&lt;/div&gt;&quot;
         },
         &quot;$:/themes/welford/phasersonkill-static/templates/tagsviewtemplate&quot;: {
             &quot;title&quot;: &quot;$:/themes/welford/phasersonkill-static/templates/tagsviewtemplate&quot;,
@@ -5711,7 +5577,7 @@ Error message and password prompt
         },
         &quot;$:/themes/welford/phasersonkill-static/title&quot;: {
             &quot;title&quot;: &quot;$:/themes/welford/phasersonkill-static/title&quot;,
-            &quot;text&quot;: &quot;phasersonkill.com mostly programming \n&quot;
+            &quot;text&quot;: &quot;Sample Static Blog\n&quot;
         }
     }
 }</pre>
@@ -5751,7 +5617,7 @@ void main(void)
 <div color="#ff8000" created="20150220230820259" modified="20150220230820259" title="c++">
 <pre></pre>
 </div>
-<div created="20150220223757286" modified="20150220234217091" tags="" title="Exporting Static Blogs">
+<div created="20150220223757286" modified="20150221163606307" tags="" title="Exporting Static Blogs">
 <pre>!The Short Version※
 
 Run ``export_blog.bat`` and your blog will be generated using any tiddlers tagged {{blog||$:/core/ui/TagTemplate}}
@@ -5763,10 +5629,10 @@ Run ``export_blog.bat`` and your blog will be generated using any tiddlers tagge
 !!Plugins
 
 ;https://github.com/welford/staticlinks
-:This exports things to the correct directory and fixed up links
+:This exports things to the correct directory and fixed up links. Also contains template pages for exporting.
 
 ;https://github.com/welford/phasersonkill-static
-:This helps auto generate pages based on your tags. Can add some style to it, if you so wish.
+:Adds style to the auto generated blog, customize as you wish.
 
 !!Framework Posts
 ;[[Tags]]
@@ -5819,6 +5685,9 @@ The tiddlywiki itself needs to contain the themes you want to use when exporting
 <div created="20150220224111898" modified="20150220224224569" tags="blog blog-framework blog-dontexport unindex" title="hidden tags">
 <pre>Add Tags to this and they will be hidden when statically exporting</pre>
 </div>
+<div created="20150221163917053" modified="20150221163948135" tags="blog katex" title="Katex Example">
+<pre>$$\displaystyle f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi$$</pre>
+</div>
 <div color="#8000ff" created="20150220230806993" modified="20150220230806993" title="sample">
 <pre></pre>
 </div>
@@ -5839,6 +5708,9 @@ The tiddlywiki itself needs to contain the themes you want to use when exporting
 !!!in tiddlywiki
 
 The N most recent posts will appear in index.html</pre>
+</div>
+<div created="20150221163951232" modified="20150221164023541" tags="blog" title="This the the Index">
+<pre>The ten newest posts will appear here. </pre>
 </div>
 <div color="#ff8080" created="20150220230748735" modified="20150220230748735" title="wikitext">
 <pre></pre>
