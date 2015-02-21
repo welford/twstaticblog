@@ -1,0 +1,8 @@
+tags: $:/tags/ViewTemplate
+title: $:/core/ui/ViewTemplate/subtitle
+
+<div class="tc-subtitle">
+<$link to={{!!modifier}}>
+<$view field="modifier"/>
+</$link> <$view field="created" format="date" template="YYYY/MM/DD 0hh:0mm"/>
+</div>
