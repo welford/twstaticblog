@@ -22,6 +22,7 @@ exports.params = [
 var TAG_EXP_ATTR = "tag";
 var POSTS_EXP_ATTR = "posts";
 var INDEX_EXP_ATTR = "index";
+var FRAMEWORK_EXP_ATTR = "framework";
 
 var FRAMEWORK_TAG = "blog-framework";
 var TAG_LINK_ATTR = "taglink";
@@ -48,21 +49,9 @@ exports.run = function() {
 		path_to_root="../";
 	}
 	//index.html and framework stuff are special and go in the root
-	else if(attr==INDEX_EXP_ATTR){
+	else if(attr==FRAMEWORK_EXP_ATTR || attr==INDEX_EXP_ATTR){
 		path_to_root="./";
-	}
-	//special case...framework posts appear at the root
-	if($tw.wiki && title) {
-		//links to anything else...
-		var tiddler = $tw.wiki.getTiddler(title);
-		if(tiddler){
-			if(tiddler.fields.tags) {
-				if(tiddler.fields.tags.indexOf(FRAMEWORK_TAG) !== -1) {
-					path_to_root="./";
-				}			
-			}
-		}
-	}
+	}	
 
 	//------------------------------------------------------
 	//Using path_to_root generate the correct folder path to this post 
