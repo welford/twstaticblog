@@ -1,0 +1,29 @@
+{
+    "plugins": [
+        "tiddlywiki/katex",
+        "tiddlywiki/highlight",
+        "welford/staticlinks"
+    ],
+    "themes": [
+        "tiddlywiki/vanilla",
+        "welford/phasersonkill",
+        "welford/phasersonkill-static"
+    ],
+    "build": {
+        "css": [
+            "--rendertiddler", "$:/core/templates/static.template.css", "static.css", "text/plain"
+        ],
+        "index": [            
+            "--rendertiddler", "$:/themes/welford/phasersonkill-static/templates/static.index.html", "index.html", "text/plain"
+           ],
+        "posts": [
+            "--rendertiddlers", "[tag[blog]]-[tag[blog-framework]]-[tag[blog-dontexport]]", "$:/themes/welford/phasersonkill-static/templates/static.tiddler.html", "posts", "text/plain", ".html"
+        ],
+        "framework": [
+            "--rendertiddlers", "[tag[blog-framework]]-[tag[blog-dontexport]]", "$:/themes/welford/phasersonkill-static/templates/static.framework.html", "framework", "text/plain", ".html", "noclean"
+        ],
+        "tag": [
+            "--rendertiddlers", "[tag[blog]tags[]]-[[hidden tags]tags[]]", "$:/themes/welford/phasersonkill-static/templates/static.tag.html", "tags", "text/plain", ".html", "noclean"
+        ]    
+    }
+}
