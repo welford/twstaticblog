@@ -25,18 +25,19 @@ exports.params = [
 Run the macro
 */
 exports.run = function(title) {
+	var sanitized_title = title.replace(/([^a-z0-9]+)/gi, '-');
 	var pathparam = this.params[2];
 	if(pathparam == "tags"){
-		return ("./tags/"+ encodeURIComponent(title)).toLocaleLowerCase();
+		return ("./tags/"+ sanitized_title).toLocaleLowerCase();
 	}
 	if(pathparam == "framework"){
-		return ("./"+ encodeURIComponent(title)).toLocaleLowerCase();
+		return ("./"+ sanitized_title).toLocaleLowerCase();
 	}
 	var tiddler = $tw.wiki.getTiddler(title);	
 	if(pathparam == "posts" && tiddler){
 		var created = tiddler.fields["created"];
 		var fmt_created = $tw.utils.formatDateString(created,"YYYY/MM/DD/");
-		return (fmt_created + encodeURIComponent(title)).toLocaleLowerCase();
+		return (fmt_created + sanitized_title).toLocaleLowerCase();
 	}
 	return null;
 };
