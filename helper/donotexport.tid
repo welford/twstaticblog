@@ -1,0 +1,20 @@
+title: $:/plugins/welford/twstaticblog/helper/donotexport
+tags: blog-draft blog-donotexport
+
+!Add Tags to this tiddler and they will not be exported
+
+!Filter
+
+``-[[$:/plugins/welford/twstaticblog/helper/donotexport]tags[]tagging[]]``
+
+Add this to your custom filters to make sure stuff intended to be hidden is kept hidden
+
+!Example List 
+
+These are tagged such that they will not be exported.
+
+<$list filter="[[$:/plugins/welford/twstaticblog/helper/donotexport]tags[]tagging[]]">
+
+<$view field="title"/><br/>
+
+</$list>

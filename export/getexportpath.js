@@ -1,5 +1,5 @@
 /*\
-title: $:/plugins/tiddlywiki/welford/staticlinks/get-export-path.js
+title: $:/plugins/welford/twstaticblog/export/get-export-path.js
 type: application/javascript
 module-type: macro
 returns the folder a tiddler should be output to 

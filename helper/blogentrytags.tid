@@ -1,0 +1,20 @@
+title: $:/plugins/welford/twstaticblog/helper/blogentrytags
+tags: blog
+
+!Add Tags to this tiddler and they be exported as blog posts
+
+!Filter
+
+``[[$:/plugins/welford/twstaticblog/helper/blogentrytags]tags[]tagging[]]``
+
+This filter should catch all blog posts
+
+!Example List 
+
+10 tiddlers that will be exported as blog entries
+
+<$list filter="[[$:/plugins/welford/twstaticblog/helper/blogentrytags]tags[]tagging[]]">
+
+<$view field="title"/><br/>
+
+</$list>

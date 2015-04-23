@@ -1,0 +1,7 @@
+{
+	"title": "$:/plugins/welford/twstaticblog/export",
+	"description": "Enables a blog style folder structure when exporting static websites",
+    "author": "James.W.Anderson",
+    "core-version": ">=5.0.0",
+	"list": "README"
+}

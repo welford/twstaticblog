@@ -1,4 +1,4 @@
-title: $:/themes/welford/phasersonkill-static/linktopost
+title: $:/plugins/welford/twstaticblog/helper/linktopost
 
 <$link to={{!!title}}>View As Single Post >></$link>
 <br/>

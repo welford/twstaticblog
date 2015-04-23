@@ -1,4 +1,4 @@
-title: $:/plugins/welford/staticlinks/templates/static.tag.html
+title: $:/plugins/welford/twstaticblog/export/static.tag.html
 
 \define tv-wikilink-template() $uri_doubleencoded$.html
 \define tv-subfolder-links() tag
@@ -18,13 +18,13 @@ title: $:/plugins/welford/staticlinks/templates/static.tag.html
 <meta name="format-detection" content="telephone=no" />
 <link id="faviconLink" rel="shortcut icon" href="../favicon.ico">
 <link rel="stylesheet" href="../static.css">
-<title>`{{$:/themes/welford/phasersonkill-static/title}}`</title>
+<title>`{{$:/plugins/welford/twstaticblog/helper/title}}`</title>
 </head>
 <body class="tc-body">
 `{{$:/StaticBanner||$:/core/templates/html-tiddler}}`
 <section class="tc-story-river">
 `<$importvariables filter="[[$:/core/ui/PageMacros]] [all[shadows+tiddlers]tag[$:/tags/Macro]!has[draft.of]]">
-<$view tiddler="$:/plugins/welford/staticlinks/templates/tagsviewtemplate" format="htmlwikified"/>
+<$view tiddler="$:/plugins/welford/staticlinks/export/tagsviewtemplate" format="htmlwikified"/>
 </$importvariables>`
 </section>
 </body>

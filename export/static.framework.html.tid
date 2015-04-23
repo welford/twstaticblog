@@ -1,7 +1,7 @@
-title: $:/plugins/welford/staticlinks/templates/static.tiddler.html
+title: $:/plugins/welford/twstaticblog/export/static.framework.html
 
 \define tv-wikilink-template() $uri_doubleencoded$.html
-\define tv-subfolder-links() posts
+\define tv-subfolder-links() framework
 \define tv-config-toolbar-icons() no
 \define tv-config-toolbar-text() no
 \define tv-config-toolbar-class() tc-btn-invisible
@@ -16,9 +16,9 @@ title: $:/plugins/welford/staticlinks/templates/static.tiddler.html
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <meta name="format-detection" content="telephone=no" />
-<link id="faviconLink" rel="shortcut icon" href="../../../favicon.ico">
-<link rel="stylesheet" href="../../../static.css">
-<title>`{{$:/themes/welford/phasersonkill-static/title}}`</title>
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="./static.css">
+<title>`{{$:/plugins/welford/twstaticblog/helper/title}}`</title>
 </head>
 <body class="tc-body">
 `{{$:/StaticBanner||$:/core/templates/html-tiddler}}`

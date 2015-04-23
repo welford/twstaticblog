@@ -1,0 +1,7 @@
+{
+	"title": "$:/plugins/welford/twstaticblog/helper",
+	"description": "Files to help customize a blog before it is exported",
+    "author": "James.W.Anderson",
+    "core-version": ">=5.0.0",
+	"list": "README"
+}

@@ -1,5 +1,5 @@
 /*\
-title: $:/plugins/tiddlywiki/welford/staticlinks/get-export-image.js
+title: $:/plugins/welford/twstaticblog/export/get-export-image.js
 type: application/javascript
 module-type: macro
 returns the formatted link tiddler to a tiddler
