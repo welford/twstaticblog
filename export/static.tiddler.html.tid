@@ -21,7 +21,7 @@ title: $:/plugins/welford/twstaticblog/export/static.tiddler.html
 <title>`{{$:/plugins/welford/twstaticblog/title}}`</title>
 </head>
 <body class="tc-body">
-`{{$:/StaticBanner||$:/core/templates/html-tiddler}}`
+`{{$:/plugins/welford/twstaticblog/helper/staticbanner||$:/core/templates/html-tiddler}}`
 <section class="tc-story-river">
 `<$importvariables filter="[[$:/core/ui/PageMacros]] [all[shadows+tiddlers]tag[$:/tags/Macro]!has[draft.of]]">
 <$view tiddler="$:/core/ui/ViewTemplate" format="htmlwikified"/>

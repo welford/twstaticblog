@@ -1,7 +1,5 @@
-title: $:/plugins/welford/twstaticblog/helper/blogbanner
+title: $:/plugins/welford/twstaticblog/helper/staticbanner
 
 <div> 
-[[index]]
-[[tags|Tags]]
-[[about|About]]
+[[Sample Static Blog|index]], [[Tags|Tags]]. A barebones header, replace me!
 </div>
