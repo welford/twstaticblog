@@ -4,7 +4,7 @@ created: 20150420093458978
 modified: 20150423172340063
 
 <div style="display:inline;font-size:1.6em;line-height:1.65em;">
-<$list filter="[[$:/plugins/welford/twstaticblog/helper/blogentrytags]tags[]tagging[]tags[]sort[title]]-[[$:/plugins/welford/twstaticblog/helper/hiddentags]tags[]]">
+<$list filter="[[$:/plugins/welford/twstaticblog/helper/ctrl.post]tags[]tagging[]tags[]sort[title]]-[[$:/plugins/welford/twstaticblog/helper/ctrl.hidden]tags[]]">
 <$link to={{!!title}} class="taglink" taglink="true"><$transclude tiddler="$:/core/ui/TagTemplate"/></$link>
 </$list>
 </div>

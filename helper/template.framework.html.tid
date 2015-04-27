@@ -1,4 +1,4 @@
-title: $:/plugins/welford/twstaticblog/export/static.framework.html
+title: $:/plugins/welford/twstaticblog/helper/template.framework.html
 
 \define tv-wikilink-template() $uri_doubleencoded$.html
 \define tv-subfolder-links() framework
@@ -18,10 +18,10 @@ title: $:/plugins/welford/twstaticblog/export/static.framework.html
 <meta name="format-detection" content="telephone=no" />
 <link id="faviconLink" rel="shortcut icon" href="favicon.ico">
 <link rel="stylesheet" href="./static.css">
-<title>`{{$:/plugins/welford/twstaticblog/helper/title}}`</title>
+<title>`{{$:/plugins/welford/twstaticblog/helper/blog-title}}`</title>
 </head>
 <body class="tc-body">
-`{{$:/plugins/welford/twstaticblog/helper/staticbanner||$:/core/templates/html-tiddler}}`
+`{{$:/plugins/welford/twstaticblog/helper/blog-banner||$:/core/templates/html-tiddler}}`
 <section class="tc-story-river">
 `<$importvariables filter="[[$:/core/ui/PageMacros]] [all[shadows+tiddlers]tag[$:/tags/Macro]!has[draft.of]]">
 <$view tiddler="$:/core/ui/ViewTemplate" format="htmlwikified"/>

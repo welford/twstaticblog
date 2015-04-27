@@ -1,7 +1,7 @@
-title: $:/plugins/welford/twstaticblog/export/static.index.html
+title: $:/plugins/welford/twstaticblog/helper/template.tag.html
 
 \define tv-wikilink-template() $uri_doubleencoded$.html
-\define tv-subfolder-links() index
+\define tv-subfolder-links() tag
 \define tv-config-toolbar-icons() no
 \define tv-config-toolbar-text() no
 \define tv-config-toolbar-class() tc-btn-invisible
@@ -16,18 +16,15 @@ title: $:/plugins/welford/twstaticblog/export/static.index.html
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <meta name="format-detection" content="telephone=no" />
-<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
-<link rel="stylesheet" href="./static.css">
+<link id="faviconLink" rel="shortcut icon" href="../favicon.ico">
+<link rel="stylesheet" href="../static.css">
 <title>`{{$:/plugins/welford/twstaticblog/helper/title}}`</title>
 </head>
 <body class="tc-body">
 `{{$:/plugins/welford/twstaticblog/helper/staticbanner||$:/core/templates/html-tiddler}}`
 <section class="tc-story-river">
 `<$importvariables filter="[[$:/core/ui/PageMacros]] [all[shadows+tiddlers]tag[$:/tags/Macro]!has[draft.of]]">
-<$list filter="[[$:/plugins/welford/twstaticblog/helper/blogentrytags]tags[]tagging[]!has[draft.of]!sort[created]]-[[$:/plugins/welford/twstaticblog/helper/donotindex]tags[]tagging[]]-[[$:/plugins/welford/twstaticblog/helper/donotexport]tags[]tagging[]]-[[$:/plugins/welford/twstaticblog/helper/blogentrytags]]">
-<$view tiddler="$:/core/ui/ViewTemplate" format="htmlwikified"/>
-<$view tiddler="$:/plugins/welford/twstaticblog/helper/linktopost" format="htmlwikified"/>
-</$list>
+<$view tiddler="$:/plugins/welford/staticlinks/helper/vt.tagpage" format="htmlwikified"/>
 </$importvariables>`
 </section>
 </body>

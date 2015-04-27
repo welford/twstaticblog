@@ -1,4 +1,4 @@
-title: $:/plugins/welford/staticlinks/export/tagsviewtemplate
+title: $:/plugins/welford/staticlinks/helper/vt.tagpage
 
 <div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists   tc-tagged-blog tc-tagged-tiddlywiki">
 
@@ -7,10 +7,10 @@ title: $:/plugins/welford/staticlinks/export/tagsviewtemplate
 <$set name="cutid" filter={{!!title}} >
 
 <div class="tc-tiddler-body">
-<$list filter="[[$:/plugins/welford/twstaticblog/helper/blogentrytags]tags[]tagging[]tag<cutid>!sort[created]eachday[created]]">
+<$list filter="[[$:/plugins/welford/twstaticblog/helper/ctrl.post]tags[]tagging[]tag<cutid>!sort[created]eachday[created]]">
 <div class="tc-menu-list-item">
 ''<$view field="created" format="date" template="YYYY/MM/DD"/>''
-<$list filter="[[$:/plugins/welford/twstaticblog/helper/blogentrytags]tags[]tagging[]tag<cutid>sameday:created{!!created}]">
+<$list filter="[[$:/plugins/welford/twstaticblog/helper/ctrl.post]tags[]tagging[]tag<cutid>sameday:created{!!created}]">
 <div class="tc-menu-list-subitem">
 <$link class="long-links" to={{!!title}}><$view field="title"/></$link>
 </div>

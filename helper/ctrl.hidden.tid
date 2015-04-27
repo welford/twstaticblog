@@ -1,4 +1,4 @@
-title: $:/plugins/welford/twstaticblog/helper/hiddentags
+title: $:/plugins/welford/twstaticblog/helper/ctrl.hidden
 tags: blog blog-framework unindex blog-draft blog-donotexport
 
 !Add Tags to this tiddler and they will be hidden when statically exporting using the twstaticblog plugin.

@@ -1,0 +1,17 @@
+title: Archived Articles
+tags: blog-framework
+created: 20150420093458978
+modified: 20150423172340063
+
+<$list filter="[[$:/plugins/welford/twstaticblog/helper/ctrl.post]tags[]tagging[]!has[draft.of]!sort[created]eachday[created]]-[[$:/plugins/welford/twstaticblog/helper/ctrl.donotexport]tags[]tagging[]]">
+<div class="tc-menu-list-item">
+<$view field="created" format="date" template="YYYY/MM/DD"/>
+<$list filter="[[$:/plugins/welford/twstaticblog/helper/ctrl.post]tags[]tagging[]sameday:created{!!created}!has[draft.of]]-[[$:/plugins/welford/twstaticblog/helper/ctrl.donotexport]tags[]tagging[]]">
+<div class="tc-menu-list-subitem">
+<$link class="long-links" to={{!!title}}><$view field="title"/></$link> 
+&nbsp;&nbsp;&nbsp;<div class="tc-tags-wrapper" style="display:inline;font-size:0.7em;">
+<$list filter="[all[current]tags[]sort[title]]-[[$:/plugins/welford/twstaticblog/helper/ctrl.hidden]tags[]]"><$link to={{!!title}} taglink="true"><$transclude tiddler="$:/core/ui/TagTemplate"/></$link></$list></div>
+</div>
+</$list>
+</div>
+</$list>

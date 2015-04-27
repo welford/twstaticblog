@@ -1,11 +1,11 @@
-title: $:/plugins/welford/twstaticblog/helper/blogframeworktags
+title: $:/plugins/welford/twstaticblog/helper/ctrl.framework
 tags: blog-framework
 
 !Add Tags to this tiddler and they be exported as blog framework pages
 
 !Filter
 
-``[[$:/plugins/welford/twstaticblog/helper/blogframeworktags]tags[]tagging[]]``
+``[[$:/plugins/welford/twstaticblog/helper/ctrl.framework]tags[]tagging[]]``
 
 This filter should catch all blog framework pages
 
@@ -13,7 +13,7 @@ This filter should catch all blog framework pages
 
 Tiddlers that will be exported as blog framework pages
 
-<$list filter="[[$:/plugins/welford/twstaticblog/helper/blogframeworktags]tags[]tagging[]]">
+<$list filter="[[$:/plugins/welford/twstaticblog/helper/ctrl.framework]tags[]tagging[]]">
 
 <$view field="title"/><br/>
 

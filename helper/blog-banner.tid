@@ -1,4 +1,4 @@
-title: $:/plugins/welford/twstaticblog/helper/staticbanner
+title: $:/plugins/welford/twstaticblog/helper/blog-banner
 
 <div> 
 [[Sample Static Blog|index]], [[Tags|Tags]]. A barebones header, replace me!

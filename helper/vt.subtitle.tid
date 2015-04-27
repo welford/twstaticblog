@@ -1,4 +1,4 @@
-title: $:/plugins/welford/twstaticblog/helper/subtitle
+title: $:/plugins/welford/twstaticblog/helper/vt.subtitle
 
 <div class="tc-subtitle">
 <$link to={{!!modifier}}>
