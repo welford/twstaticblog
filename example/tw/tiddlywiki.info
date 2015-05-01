@@ -2,7 +2,8 @@
     "plugins": [
         "tiddlywiki/katex",
         "tiddlywiki/highlight",
-        "welford/staticlinks"
+        "welford/twstaticblog/helper",
+        "welford/twstaticblog/export"
     ],
     "themes": [
         "tiddlywiki/vanilla",
@@ -13,16 +14,16 @@
             "--rendertiddler", "$:/core/templates/static.template.css", "static.css", "text/plain"
         ],
         "index": [            
-            "--rendertiddler", "$:/plugins/welford/staticlinks/templates/static.index.html", "index.html", "text/plain"
+            "--rendertiddler", "$:/plugins/welford/twstaticblog/helper/template.index.html", "index.html", "text/plain"
            ],
         "posts": [
-            "--rendertiddlers", "[tag[blog]]-[tag[blog-framework]]-[tag[blog-dontexport]]", "$:/plugins/welford/staticlinks/templates/static.tiddler.html", "posts", "text/plain", ".html"
+            "--rendertiddlers", "[[$:/plugins/welford/twstaticblog/helper/ctrl.post]tags[]tagging[]]-[[$:/plugins/welford/twstaticblog/helper/ctrl.donotexport]tags[]tagging[]]-$:/plugins/welford/twstaticblog/helper/ctrl.post", "$:/plugins/welford/twstaticblog/helper/template.post.html", "posts", "text/plain", ".html"
         ],
         "framework": [
-            "--rendertiddlers", "[tag[blog-framework]]-[tag[blog-dontexport]]", "$:/plugins/welford/staticlinks/templates/static.framework.html", "framework", "text/plain", ".html", "noclean"
+            "--rendertiddlers", "[[$:/plugins/welford/twstaticblog/helper/ctrl.framework]tags[]tagging[]]-[[$:/plugins/welford/twstaticblog/helper/ctrl.donotexport]tags[]tagging[]]-$:/plugins/welford/twstaticblog/helper/ctrl.framework", "$:/plugins/welford/twstaticblog/helper/template.framework.html", "framework", "text/plain", ".html", "noclean"
         ],
         "tag": [
-            "--rendertiddlers", "[tag[blog]tags[]]-[[hidden tags]tags[]]", "$:/plugins/welford/staticlinks/templates/static.tag.html", "tags", "text/plain", ".html", "noclean"
+            "--rendertiddlers", "[[$:/plugins/welford/twstaticblog/helper/ctrl.post]tags[]tagging[]tags[]]-[[$:/plugins/welford/twstaticblog/helper/ctrl.donotexport]tags[]]-[[$:/plugins/welford/twstaticblog/helper/ctrl.hidden]tags[]]", "$:/plugins/welford/twstaticblog/helper/template.tag.html", "tags", "text/plain", ".html", "noclean"
         ]    
     }
 }
