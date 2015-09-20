@@ -70,7 +70,16 @@ exports.run = function() {
 		var tiddler = $tw.wiki.getTiddler(title);
 		if(tiddler){
 			var created = tiddler.fields["created"];
-			var fmt_created = $tw.utils.formatDateString(created,"YYYY/MM/DD");
+
+			//KEEP THIS AND GET EXPORT PATH IN SYNC
+
+			//create iso string gives us something like '2012-11-04T14:51:06.157Z'...split on T then on - to get out the data that we desire
+			var tmp = created.toISOString().split("T")[0];
+			var ymd = tmp.split("-");
+			var fmt_created = ymd[0] + "/" + ymd[1] + "/" + ymd[2]; //in sync but for the trailing slash
+
+			//var fmt_created = $tw.utils.formatDateString(created,"YYYY/MM/DD"); //this gives us local time, useless if we are exporting from different computers!
+
 			finalLink = path_to_root + fmt_created + "/";
 			//most posts will be in the place created above, but blog-framework tagged ones are in the root
 			if(tiddler.fields.tags) {

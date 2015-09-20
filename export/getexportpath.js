@@ -36,7 +36,16 @@ exports.run = function(title) {
 	var tiddler = $tw.wiki.getTiddler(title);	
 	if(pathparam == "posts" && tiddler){
 		var created = tiddler.fields["created"];
-		var fmt_created = $tw.utils.formatDateString(created,"YYYY/MM/DD/");
+
+		//KEEP THIS AND GET EXPORT LINK IN SYNC
+
+		//create iso string gives us something like '2012-11-04T14:51:06.157Z'...split on T then on - to get out the data that we desire
+		var tmp = created.toISOString().split("T")[0];
+		var ymd = tmp.split("-");
+		var fmt_created = ymd[0] + "/" + ymd[1] + "/" + ymd[2] + "/";
+
+		//var fmt_created = $tw.utils.formatDateString(created,"YYYY/MM/DD/"); //this gives us local time, useless if we are exporting from different computers!
+
 		return (fmt_created + sanitized_title).toLocaleLowerCase();
 	}
 	return null;
