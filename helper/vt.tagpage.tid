@@ -7,7 +7,7 @@ title: $:/plugins/welford/staticlinks/helper/vt.tagpage
 <$set name="cutid" filter={{!!title}} >
 
 <div class="tc-tiddler-body">
-<$list filter="[[$:/plugins/welford/twstaticblog/helper/ctrl.post]tags[]tagging[]tag<cutid>!sort[created]eachday[created]]">
+<$list filter="[[$:/plugins/welford/twstaticblog/helper/ctrl.post]tags[]tagging[]tag<cutid>!sort[created]eachday[created]]-[[$:/plugins/welford/twstaticblog/helper/ctrl.donotexport]tags[]tagging[]]">
 <div class="tc-menu-list-item">
 ''<$view field="created" format="date" template="YYYY/MM/DD"/>''
 <$list filter="[[$:/plugins/welford/twstaticblog/helper/ctrl.post]tags[]tagging[]tag<cutid>sameday:created{!!created}]">

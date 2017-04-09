@@ -17,6 +17,7 @@ title: $:/plugins/welford/twstaticblog/helper/template.tag.html
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <meta name="format-detection" content="telephone=no" />
 <link id="faviconLink" rel="shortcut icon" href="../favicon.ico">
+`{{$:/plugins/welford/twstaticblog/helper/font.link}}`
 <link rel="stylesheet" href="../static.css">
 <title>`{{$:/plugins/welford/twstaticblog/helper/title}}`</title>
 </head>
