@@ -1,17 +1,17 @@
-#TWStaticBlog	
+# TWStaticBlog	
 
 A complete plugin for exporting static blogs from TiddlyWiki:
 
-##Overview
+## Overview
 
 This plugin overrides the usual flat export functionality of TiddlyWiki with a one which provides a date based folder structure. It also provides several special tags and helper tiddlers for hiding posts/creating drafts/maintaining a sitemap etc.
 
 
-##Code Changes
+## Code Changes
 
 The code changes can be grouped into four categories:
 
-###1.View Template Changes
+### 1.View Template Changes
 
 Changes which change how the exported tidders looks or add new features to the tiddler.
 
@@ -20,7 +20,7 @@ Changes which change how the exported tidders looks or add new features to the t
 + tags.tid
 + tag-view-template.tid
 
-###2.Static Templates
+### 2.Static Templates
 
 Provides the template which exported tiddlers use when exported. 
 
@@ -29,7 +29,7 @@ Provides the template which exported tiddlers use when exported.
 + static.tag.html.tid
 + static.tiddler.html.tid
 
-###3.Export Time Javascript
+### 3.Export Time Javascript
 
 Helps the exporter fix up links as we will not be using the standard flat folder export structure.
 
@@ -37,7 +37,7 @@ Helps the exporter fix up links as we will not be using the standard flat folder
 + getexportlink.js
 + getexportpath.js
 
-###4.Helper Tiddlers
+### 4.Helper Tiddlers
 
 There help with several issues
 
