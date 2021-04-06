@@ -1,0 +1,343 @@
+<!doctype html>
+<html>
+<head>
+<meta name="tiddlywiki-version" content="5.1.23" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="application-name" content="TiddlyWiki" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="format-detection" content="telephone=no" />
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link rel="stylesheet" href="./static.css">
+<title>Sample Static Blog
+</title>
+</head>
+<body class="tc-body">
+<p><div> 
+<a class="tc-tiddlylink tc-tiddlylink-missing" href="./index.html">Sample Static Blog</a>, <a class="tc-tiddlylink tc-tiddlylink-shadow" href="./tags.html">Tags</a>. A barebones header, replace me!
+</div>
+</p>
+<section class="tc-story-river">
+
+
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-blog tc-tagged-hello" data-tags="blog hello" data-tiddler-title="Creating A Static Blog"><div class="tc-tiddler-title"><div class="tc-titlebar"><span class="tc-tiddler-controls"><span class=" tc-reveal"><button aria-label="more" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="More actions"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="edit" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Edit this tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="close" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Close this tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span></span><span><h2 class="tc-title">Creating A Static Blog</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class=" tc-reveal" hidden="true"></div>
+<div class="tc-subtitle">
+<a class="tc-tiddlylink tc-tiddlylink-missing" href="./.html">
+
+</a> 2021/4/6 20:59
+</div>
+<div class="tc-tags-wrapper">
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves taglink" href="./tags/hello.html"><span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:#000;
+fill:#cccccc;
+color:#cccccc;">
+hello
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span></a>
+</div>
+
+<div class="tc-tiddler-body tc-reveal"><h1 class="">Overview</h1><p>(This is generated from the examples in <a class="tc-tiddlylink-external" href="https://github.com/welford/twstaticblog/" rel="noopener noreferrer" target="_blank">https://github.com/welford/twstaticblog/</a> 👍 )</p><p>I keep notes on various things in Tiddlywiki and it is very useful to be able to export my blog from the same resource. Currently <a class="tc-tiddlylink tc-tiddlylink-missing" href="./tiddlywiki.html">TiddlyWiki</a> has a good but bare bones static export mechanism, I have made some plugins to enable something more along the lines of what I want in a static blog.</p><p>Put simply, if I tag any tiddler within my tiddlywiki with a special tag e.g. <span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#222222;
+color:#222222;">
+blog
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span> then that tiddler will be included as part of my blog when I run the export batch file. The tags used to specify what is and what isn't an export target are configurable. </p><p>I use these plugins to generate <a class="tc-tiddlylink-external" href="http://phasersonkill.com/" rel="noopener noreferrer" target="_blank">http://phasersonkill.com/</a> </p><p>The code for this example can be found here: <a class="tc-tiddlylink-external" href="https://github.com/welford/twstaticblog" rel="noopener noreferrer" target="_blank">https://github.com/welford/twstaticblog</a> (see example folder for this very file)</p><ul><li>this guide is windows specific in places</li><li>you will need node.js follow the <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/#GettingStarted%20-%20Node.js" rel="noopener noreferrer" target="_blank">tiddlywiki guide </a> for details</li></ul><h1 class="">Plugins</h1><p>This actually required two plugins. One helper that exists within your tiddlwyiki, and another export plugin you use in a <a class="tc-tiddlylink tc-tiddlylink-missing" href="./-https-tiddlywiki-com-tiddlywikifolders.html">Wikifolder</a></p><h2 class="">Helper</h2><dl><dt><a class="tc-tiddlylink-external" href="https://github.com/welford/twstaticblog/tree/master/helper" rel="noopener noreferrer" target="_blank">https://github.com/welford/twstaticblog/tree/master/helper</a></dt></dl><p>Locally available here : <a class="tc-tiddlylink tc-tiddlylink-resolves" href="#">$:/plugins/welford/twstaticblog/helper</a></p><dl><dd>Exists within your Tiddlywiki and lets you customise the blog's output without having to worry about the format of your own wiki changing. By editing the tiddlers in this plugin you can change the name of the blog, which tags define your blog, how posts are linked to, and several other things.  </dd></dl><h2 class="">Exporter</h2><dl><dt><a class="tc-tiddlylink-external" href="https://github.com/welford/twstaticblog/tree/master/export" rel="noopener noreferrer" target="_blank">https://github.com/welford/twstaticblog/tree/master/export</a></dt><dd>Invoked when exporting the blog, this plugin swaps out some of the core view template tiddlers for those in the helper and as such should not be imported into your own TW. It also contains the templates used when constructing each type of page (The types, discussed below, are <strong>Blog Post</strong>, <strong>Index</strong>, <strong>Framework</strong>, and <strong>Tag</strong>)</dd></dl><h1 class="">Helper Details</h1><h2 class="">Configuration</h2><p>All the tags listed below are fully customizable:</p><table><thead><tr class="evenRow"><td align="center">plugin tiddler</td><td align="center">purpose</td></tr></thead><tbody><tr class="oddRow"><td align="center"><code>$:/plugins/welford/twstaticblog/helper/ctrl.post</code></td><td>Defines which tags constitutes a blog post, defaults to <span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#222222;
+color:#222222;">
+blog
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span></td></tr><tr class="evenRow"><td align="center"><code>$:/plugins/welford/twstaticblog/helper/ctrl.framework</code></td><td>Defines which tags constitutes a blog framework <span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#222222;
+color:#222222;">
+blog-framework
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span></td></tr><tr class="oddRow"><td align="center"><code>$:/plugins/welford/twstaticblog/helper/ctrl.donotexport</code></td><td>Defines which tags should not be exported even if they are tagged as a blog posts or blog frameworks <span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#222222;
+color:#222222;">
+blog-donotexport
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span><span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#222222;
+color:#222222;">
+blog-draft
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span></td></tr><tr class="evenRow"><td align="center"><code>$:/plugins/welford/twstaticblog/helper/ctrl.donotindex</code></td><td>Defines which tags will filtered from the index post <span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#222222;
+color:#222222;">
+unindex
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span></td></tr><tr class="oddRow"><td align="center"><code>$:/plugins/welford/twstaticblog/helper/ctrl.hidden</code></td><td align="left">Defines which tags will be excluded from tag posts and from the tag lists below the title of artiles. <span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#222222;
+color:#222222;">
+blog
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span><span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#222222;
+color:#222222;">
+blog-donotexport
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span><span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#222222;
+color:#222222;">
+blog-draft
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span><span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#222222;
+color:#222222;">
+blog-framework
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span><span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#222222;
+color:#222222;">
+unindex
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span></td></tr></tbody></table><h2 class="">ctrl.post</h2><p>Tag any article <span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#222222;
+color:#222222;">
+blog
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span> and it will be exported as part of your blog using the templater <a class="tc-tiddlylink tc-tiddlylink-shadow" href="#">$:/plugins/welford/twstaticblog/helper/template.post.html</a> . The output directory will be <code>./YYYY/MM/DD/[tiddlername].html</code> based on their creation date of the article. </p><p>You can change the tags which define a blog post via <code>$:/plugins/welford/twstaticblog/helper/blogentrytags</code></p><p>e.g. <a class="tc-tiddlylink tc-tiddlylink-resolves" href="./2021/04/06/creating-a-static-blog.html">This post you are reading</a></p><h2 class="">template.index.html </h2><p>Any recently created article tagged with <span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#222222;
+color:#222222;">
+blog
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span> will be included in <code>index.html</code> using the <a class="tc-tiddlylink tc-tiddlylink-shadow" href="#">$:/plugins/welford/twstaticblog/helper/template.index.html</a>. This can be prevented by also adding the tag <span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#222222;
+color:#222222;">
+unindex
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span></p><p>e.g. the exported index.html</p><h2 class="">Framework</h2><p>Tag any article <span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#222222;
+color:#222222;">
+blog-framework
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span> and it will be exported as part of your blog as a &quot;framework&quot; post using the template <a class="tc-tiddlylink tc-tiddlylink-shadow" href="#">$:/plugins/welford/twstaticblog/helper/template.framework.html</a>. The output location in the root directory. I define a framework article as being a post which helps you navigate the site or one that is accessabe everywhere. I have included a few example framework posts in the helper plugin.</p><p>e.g. <a class="tc-tiddlylink tc-tiddlylink-shadow" href="./tags.html">Tags</a>, <a class="tc-tiddlylink tc-tiddlylink-resolves" href="./about.html">About</a> both linked to at the top of this page</p><h2 class="">Tag</h2><p>As this is a static site generator there is no search functionaity. My plugin auto-generates tag posts, using the template <a class="tc-tiddlylink tc-tiddlylink-shadow" href="#">$:/plugins/welford/twstaticblog/helper/template.tag.html</a>,  based on any tag in blog or framework posts as a kind of simple site-map. You can exclude tags from being included in this by adding them to the tag list in <code>$:/plugins/welford/twstaticblog/helper/hiddentags</code>  </p><p>By default the following are excluded: </p><p>e.g. <a class="tc-tiddlylink tc-tiddlylink-resolves" href="./tags/example.html"><span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:#f77;
+fill:#222222;
+color:#222222;">
+example
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span> </a><a class="tc-tiddlylink tc-tiddlylink-resolves" href="./tags/random.html"><span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:#7ff;
+fill:#222222;
+color:#222222;">
+random
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span> </a><a class="tc-tiddlylink tc-tiddlylink-resolves" href="./tags/unique-tag.html"><span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:#77f;
+fill:#222222;
+color:#222222;">
+unique tag
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span> </a> &lt;- you can click on these and jump to specified tag page.</p><h1 class="">Static Bannner</h1><p>A banner can be added to the top of every page via <a class="tc-tiddlylink tc-tiddlylink-shadow" href="#">$:/plugins/welford/twstaticblog/helper/blog-banner</a> in my case I use it to link to some of the framework posts.</p></div>
+
+<div class="tc-tiddler-plugin-info tc-reveal"><p>
+</p></div>
+</div>
+
+</p>
+<p><a class="tc-tiddlylink tc-tiddlylink-resolves" href="./2021/04/06/creating-a-static-blog.html">View As Single Post &gt;&gt;</a>
+<br>
+<br>
+</p>
+
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-blog" data-tags="blog" data-tiddler-title="Export Static Blog"><div class="tc-tiddler-title"><div class="tc-titlebar"><span class="tc-tiddler-controls"><span class=" tc-reveal"><button aria-label="more" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="More actions"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="edit" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Edit this tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="close" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Close this tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span></span><span><h2 class="tc-title">Export Static Blog</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class=" tc-reveal" hidden="true"></div>
+<div class="tc-subtitle">
+<a class="tc-tiddlylink tc-tiddlylink-missing" href="./.html">
+
+</a> 2021/4/6 20:58
+</div>
+<div class="tc-tags-wrapper">
+
+</div>
+
+<div class="tc-tiddler-body tc-reveal"><h1 class="">Install Node.js and Tiddlywiki</h1><p>follow the guide : <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/#GettingStarted%20-%20Node.js" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/#GettingStarted%20-%20Node.js</a></p><h1 class="">Example Batch File</h1><p>see <a class="tc-tiddlylink-external" href="https://github.com/welford/twstaticblog/tree/master/example/export-basic.bat" rel="noopener noreferrer" target="_blank">https://github.com/welford/twstaticblog/tree/master/example/export-basic.bat</a></p><pre><code>rd .\temp\blog-basic /s /q
+call tiddlywiki --load .\example.html --savewikifolder .\temp\blog-basic
+XCOPY /E /I /Y .\tw-basic .\temp\blog-basic
+call tiddlywiki .\temp\blog-basic --output .\blog-basic --build css
+call tiddlywiki .\temp\blog-basic --output .\blog-basic --build framework
+call tiddlywiki .\temp\blog-basic --output .\blog-basic --build tag
+call tiddlywiki .\temp\blog-basic --output .\blog-basic --build posts
+call tiddlywiki .\temp\blog-basic --output .\blog-basic --build index
+rd .\temp\blog-basic /s /q</code></pre><ol><li>Delete ./temp/blog-basic incase it is not empty</li><li>Export the local tiddlywiki, in this case example.html, as a wikifolder to ./temp/blog-basic<ol><li>see <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/#TiddlyWikiFolders" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/#TiddlyWikiFolders</a> for full details</li></ol></li><li>copy ./tw-basic/ folder to ./temp/blog-basic<ol><li>This lets us override any settings in the original exported wiki</li><li>Crucially it contains the export part of the plugin</li></ol></li><li>Load the temp wiki folder and export css to .\blog-basic</li><li>Load the temp wiki folder and export framework pages to .\blog-basic</li><li>Load the temp wiki folder and export tag pages to .\blog-basic</li><li>Load the temp wiki folder and export posts pages to .\blog-basic</li><li>Load the temp wiki folder and export index pages to .\blog-basic</li><li>delete ./temp/blog-basic </li></ol><h1 class="">Styled Example</h1><p>see <a class="tc-tiddlylink-external" href="https://github.com/welford/twstaticblog/tree/master/example/export-styled.bat" rel="noopener noreferrer" target="_blank">https://github.com/welford/twstaticblog/tree/master/example/export-styled.bat</a></p><p>exports temp to <code>.\temp\blog-styled</code> and final data to <code>.\blog-styled</code></p><p>uses <code>.\tw-styled</code> to override the tyles in this wiki</p></div>
+
+<div class="tc-tiddler-plugin-info tc-reveal"><p>
+</p></div>
+</div>
+
+</p>
+<p><a class="tc-tiddlylink tc-tiddlylink-resolves" href="./2021/04/06/export-static-blog.html">View As Single Post &gt;&gt;</a>
+<br>
+<br>
+</p>
+
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-blog" data-tags="blog" data-tiddler-title="highlight example"><div class="tc-tiddler-title"><div class="tc-titlebar"><span class="tc-tiddler-controls"><span class=" tc-reveal"><button aria-label="more" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="More actions"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="edit" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Edit this tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="close" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Close this tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span></span><span><h2 class="tc-title">highlight example</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class=" tc-reveal" hidden="true"></div>
+<div class="tc-subtitle">
+<a class="tc-tiddlylink tc-tiddlylink-missing" href="./.html">
+
+</a> 2021/4/6 20:46
+</div>
+<div class="tc-tags-wrapper">
+
+</div>
+
+<div class="tc-tiddler-body tc-reveal"><p><strong>Javascript</strong> code:</p><pre class="javascript hljs"><code>(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a,b</span>)</span>{
+    <span class="hljs-keyword">var</span> result = a+b;
+    <span class="hljs-keyword">return</span> result;
+})(<span class="hljs-number">10</span>,<span class="hljs-number">20</span>)</code></pre><p><strong>CSS</strong> code:</p><pre class="css hljs"><code> * { <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>; <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>; } <span class="hljs-comment">/* micro reset */</span>
+
+<span class="hljs-selector-tag">html</span> { <span class="hljs-attribute">font-size</span>: <span class="hljs-number">62.5%</span>; }
+<span class="hljs-selector-tag">body</span> { <span class="hljs-attribute">font-size</span>: <span class="hljs-number">14px</span>; <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.4rem</span>; } <span class="hljs-comment">/* =14px */</span>
+<span class="hljs-selector-tag">h1</span>   { <span class="hljs-attribute">font-size</span>: <span class="hljs-number">24px</span>; <span class="hljs-attribute">font-size</span>: <span class="hljs-number">2.4rem</span>; } <span class="hljs-comment">/* =24px */</span></code></pre><p><strong>Perl</strong> code:</p><pre class="perl hljs"><code><span class="hljs-keyword">package</span> Name;
+<span class="hljs-keyword">my</span> $singleton;
+
+BEGIN {
+    $singleton = {
+        <span class="hljs-string">attribute =&gt;</span> <span class="hljs-string">'value'</span>,
+        <span class="hljs-string">another   =&gt;</span> <span class="hljs-string">'something'</span>,
+    };
+    <span class="hljs-keyword">bless</span> $singleton, <span class="hljs-string">"Name"</span>;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">sub</span> <span class="hljs-title">new</span> </span>{
+    <span class="hljs-keyword">my</span> $class = <span class="hljs-keyword">shift</span>;
+    <span class="hljs-keyword">return</span> $singleton;
+}</code></pre><p><strong>Python</strong> code:</p><pre class="python hljs"><code><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Singleton</span>:</span>
+    __single = <span class="hljs-literal">None</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">( self )</span>:</span>
+        <span class="hljs-keyword">if</span> Singleton.__single:
+            <span class="hljs-keyword">raise</span> Singleton.__single
+        Singleton.__single = self</code></pre></div>
+
+<div class="tc-tiddler-plugin-info tc-reveal"><p>
+</p></div>
+</div>
+
+</p>
+<p><a class="tc-tiddlylink tc-tiddlylink-resolves" href="./2021/04/06/highlight-example.html">View As Single Post &gt;&gt;</a>
+<br>
+<br>
+</p>
+
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-blog" data-tags="blog" data-tiddler-title="Tips"><div class="tc-tiddler-title"><div class="tc-titlebar"><span class="tc-tiddler-controls"><span class=" tc-reveal"><button aria-label="more" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="More actions"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="edit" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Edit this tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="close" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Close this tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span></span><span><h2 class="tc-title">Tips</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class=" tc-reveal" hidden="true"></div>
+<div class="tc-subtitle">
+<a class="tc-tiddlylink tc-tiddlylink-missing" href="./.html">
+
+</a> 2021/4/6 19:40
+</div>
+<div class="tc-tags-wrapper">
+
+</div>
+
+<div class="tc-tiddler-body tc-reveal"><h1 class="">Change Exported Style</h1><p>You can keep your personal tiddlywiki in one format and have the exported blog in another.
+In the <code>tw\tiddlers\</code>keep a file called <code>$__theme.tid</code> containing the name of the style you wish to use e.g. using <code>$:/themes/welford/phasersonkill-static</code></p><pre><code>created: 20150620130427249
+modified: 20151207212411514
+title: $:/theme
+type: text/vnd.tiddlywiki
+
+$:/themes/welford/phasersonkill-static</code></pre><p>Any style you use will need to be included in your personal tiddlywiki or as a plugin in the <code>tw/plugins</code> folder. It's probably easier to have it contained within your own tiddlywiki but not as the active theme.</p><p>See <a class="tc-tiddlylink-external" href="https://github.com/welford/twstaticblog/tree/master/example/export-styled.bat" rel="noopener noreferrer" target="_blank">https://github.com/welford/twstaticblog/tree/master/example/export-styled.bat</a></p><h1 class="">Change Exported Palette</h1><p>Same as above, but using a file called <code>$__palette.tid</code>:</p><pre><code>created: 20170408201459621
+modified: 20170408201500717
+title: $:/palette
+type: text/vnd.tiddlywiki
+
+$:/palettes/welford/phasersonkill</code></pre><p>See <a class="tc-tiddlylink-external" href="https://github.com/welford/twstaticblog/tree/master/example/export-styled.bat" rel="noopener noreferrer" target="_blank">https://github.com/welford/twstaticblog/tree/master/example/export-styled.bat</a>
+</p></div>
+
+<div class="tc-tiddler-plugin-info tc-reveal"><p>
+</p></div>
+</div>
+
+</p>
+<p><a class="tc-tiddlylink tc-tiddlylink-resolves" href="./2021/04/06/tips.html">View As Single Post &gt;&gt;</a>
+<br>
+<br>
+</p>
+
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-blog tc-tagged-unique%20tag" data-tags="blog [[unique tag]]" data-tiddler-title="A Long Example Blog"><div class="tc-tiddler-title"><div class="tc-titlebar"><span class="tc-tiddler-controls"><span class=" tc-reveal"><button aria-label="more" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="More actions"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="edit" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Edit this tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="close" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Close this tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span></span><span><h2 class="tc-title">A Long Example Blog</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class=" tc-reveal" hidden="true"></div>
+<div class="tc-subtitle">
+<a class="tc-tiddlylink tc-tiddlylink-missing" href="./.html">
+
+</a> 2017/4/16 19:14
+</div>
+<div class="tc-tags-wrapper">
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves taglink" href="./tags/unique-tag.html"><span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:#77f;
+fill:#222222;
+color:#222222;">
+unique tag
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span></a>
+</div>
+
+<div class="tc-tiddler-body tc-reveal"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porttitor pharetra lacus nec blandit. Vivamus non augue posuere est sodales aliquet ultricies vel metus. Suspendisse potenti. Nullam nec nibh lacinia, scelerisque mauris sollicitudin, molestie urna. Nullam congue pharetra condimentum. Praesent eget iaculis tellus, et iaculis velit. Etiam vel rhoncus nulla. Morbi volutpat felis sem, non pretium ante mollis nec. Mauris vitae dui at magna pellentesque tincidunt nec vel justo. Etiam mi ex, suscipit eu scelerisque quis, mattis non augue. Sed at felis ac quam luctus vehicula. Fusce et pellentesque turpis. In a pretium orci. Morbi tempor sodales sodales.</p><p>Suspendisse potenti. Nunc vitae purus sit amet metus ornare aliquet. Nunc erat risus, interdum nec est ut, placerat vehicula turpis. Vestibulum a metus et erat scelerisque consectetur. Duis volutpat placerat est auctor finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porta dui ut neque laoreet varius. Maecenas porta nec lacus eget bibendum. Cras sed scelerisque eros, at pulvinar nibh. Sed ullamcorper tortor hendrerit est scelerisque, nec finibus mi cursus. Maecenas sodales quam erat, ac fringilla lorem congue sit amet. Sed sem sapien, rhoncus vel porttitor ac, sagittis sit amet dui. Nunc mollis, est eu vulputate sodales, massa nisl faucibus enim, eget elementum est lorem in mauris.</p><p>Morbi congue semper neque, quis pulvinar nisi interdum quis. Mauris risus ipsum, elementum a tincidunt non, rhoncus et lacus. Vivamus sit amet rutrum nibh. Cras ut faucibus mauris. Morbi imperdiet condimentum massa et interdum. In gravida velit ut odio venenatis, sit amet sollicitudin felis gravida. Cras egestas nisi vel rutrum auctor.</p><p>Maecenas et iaculis tellus. Nunc fringilla in mauris nec tincidunt. Mauris vehicula rhoncus vestibulum. Fusce porta leo nulla, at blandit nibh condimentum vel. Vivamus nec est a purus dictum varius quis a nibh. Sed tellus metus, eleifend quis accumsan euismod, mattis in metus. Aliquam consectetur felis a iaculis porttitor. Integer ac diam enim. Morbi luctus libero placerat odio placerat rutrum. Integer vestibulum aliquet metus.</p><p>Vivamus vel scelerisque tellus. Etiam aliquet, nibh id lobortis aliquet, mauris sapien volutpat odio, nec hendrerit massa ipsum viverra nunc. Praesent blandit, elit ultrices pretium auctor, risus massa fringilla arcu, in porttitor lorem neque in arcu. Mauris et nisl quis nunc cursus pharetra. Quisque interdum, risus in consectetur mollis, ex tellus pulvinar magna, ut dictum lorem eros quis justo. Sed eu rutrum dui. Aliquam elementum luctus laoreet. Curabitur a augue finibus eros ornare rutrum.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porttitor pharetra lacus nec blandit. Vivamus non augue posuere est sodales aliquet ultricies vel metus. Suspendisse potenti. Nullam nec nibh lacinia, scelerisque mauris sollicitudin, molestie urna. Nullam congue pharetra condimentum. Praesent eget iaculis tellus, et iaculis velit. Etiam vel rhoncus nulla. Morbi volutpat felis sem, non pretium ante mollis nec. Mauris vitae dui at magna pellentesque tincidunt nec vel justo. Etiam mi ex, suscipit eu scelerisque quis, mattis non augue. Sed at felis ac quam luctus vehicula. Fusce et pellentesque turpis. In a pretium orci. Morbi tempor sodales sodales.</p><p>Suspendisse potenti. Nunc vitae purus sit amet metus ornare aliquet. Nunc erat risus, interdum nec est ut, placerat vehicula turpis. Vestibulum a metus et erat scelerisque consectetur. Duis volutpat placerat est auctor finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porta dui ut neque laoreet varius. Maecenas porta nec lacus eget bibendum. Cras sed scelerisque eros, at pulvinar nibh. Sed ullamcorper tortor hendrerit est scelerisque, nec finibus mi cursus. Maecenas sodales quam erat, ac fringilla lorem congue sit amet. Sed sem sapien, rhoncus vel porttitor ac, sagittis sit amet dui. Nunc mollis, est eu vulputate sodales, massa nisl faucibus enim, eget elementum est lorem in mauris.</p><p>Morbi congue semper neque, quis pulvinar nisi interdum quis. Mauris risus ipsum, elementum a tincidunt non, rhoncus et lacus. Vivamus sit amet rutrum nibh. Cras ut faucibus mauris. Morbi imperdiet condimentum massa et interdum. In gravida velit ut odio venenatis, sit amet sollicitudin felis gravida. Cras egestas nisi vel rutrum auctor.</p><p>Maecenas et iaculis tellus. Nunc fringilla in mauris nec tincidunt. Mauris vehicula rhoncus vestibulum. Fusce porta leo nulla, at blandit nibh condimentum vel. Vivamus nec est a purus dictum varius quis a nibh. Sed tellus metus, eleifend quis accumsan euismod, mattis in metus. Aliquam consectetur felis a iaculis porttitor. Integer ac diam enim. Morbi luctus libero placerat odio placerat rutrum. Integer vestibulum aliquet metus.</p><p>Vivamus vel scelerisque tellus. Etiam aliquet, nibh id lobortis aliquet, mauris sapien volutpat odio, nec hendrerit massa ipsum viverra nunc. Praesent blandit, elit ultrices pretium auctor, risus massa fringilla arcu, in porttitor lorem neque in arcu. Mauris et nisl quis nunc cursus pharetra. Quisque interdum, risus in consectetur mollis, ex tellus pulvinar magna, ut dictum lorem eros quis justo. Sed eu rutrum dui. Aliquam elementum luctus laoreet. Curabitur a augue finibus eros ornare rutrum.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porttitor pharetra lacus nec blandit. Vivamus non augue posuere est sodales aliquet ultricies vel metus. Suspendisse potenti. Nullam nec nibh lacinia, scelerisque mauris sollicitudin, molestie urna. Nullam congue pharetra condimentum. Praesent eget iaculis tellus, et iaculis velit. Etiam vel rhoncus nulla. Morbi volutpat felis sem, non pretium ante mollis nec. Mauris vitae dui at magna pellentesque tincidunt nec vel justo. Etiam mi ex, suscipit eu scelerisque quis, mattis non augue. Sed at felis ac quam luctus vehicula. Fusce et pellentesque turpis. In a pretium orci. Morbi tempor sodales sodales.</p><p>Suspendisse potenti. Nunc vitae purus sit amet metus ornare aliquet. Nunc erat risus, interdum nec est ut, placerat vehicula turpis. Vestibulum a metus et erat scelerisque consectetur. Duis volutpat placerat est auctor finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porta dui ut neque laoreet varius. Maecenas porta nec lacus eget bibendum. Cras sed scelerisque eros, at pulvinar nibh. Sed ullamcorper tortor hendrerit est scelerisque, nec finibus mi cursus. Maecenas sodales quam erat, ac fringilla lorem congue sit amet. Sed sem sapien, rhoncus vel porttitor ac, sagittis sit amet dui. Nunc mollis, est eu vulputate sodales, massa nisl faucibus enim, eget elementum est lorem in mauris.</p><p>Morbi congue semper neque, quis pulvinar nisi interdum quis. Mauris risus ipsum, elementum a tincidunt non, rhoncus et lacus. Vivamus sit amet rutrum nibh. Cras ut faucibus mauris. Morbi imperdiet condimentum massa et interdum. In gravida velit ut odio venenatis, sit amet sollicitudin felis gravida. Cras egestas nisi vel rutrum auctor.</p><p>Maecenas et iaculis tellus. Nunc fringilla in mauris nec tincidunt. Mauris vehicula rhoncus vestibulum. Fusce porta leo nulla, at blandit nibh condimentum vel. Vivamus nec est a purus dictum varius quis a nibh. Sed tellus metus, eleifend quis accumsan euismod, mattis in metus. Aliquam consectetur felis a iaculis porttitor. Integer ac diam enim. Morbi luctus libero placerat odio placerat rutrum. Integer vestibulum aliquet metus.</p><p>Vivamus vel scelerisque tellus. Etiam aliquet, nibh id lobortis aliquet, mauris sapien volutpat odio, nec hendrerit massa ipsum viverra nunc. Praesent blandit, elit ultrices pretium auctor, risus massa fringilla arcu, in porttitor lorem neque in arcu. Mauris et nisl quis nunc cursus pharetra. Quisque interdum, risus in consectetur mollis, ex tellus pulvinar magna, ut dictum lorem eros quis justo. Sed eu rutrum dui. Aliquam elementum luctus laoreet. Curabitur a augue finibus eros ornare rutrum.</p></div>
+
+<div class="tc-tiddler-plugin-info tc-reveal"><p>
+</p></div>
+</div>
+
+</p>
+<p><a class="tc-tiddlylink tc-tiddlylink-resolves" href="./2017/04/16/a-long-example-blog.html">View As Single Post &gt;&gt;</a>
+<br>
+<br>
+</p>
+
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-blog tc-tagged-random tc-tagged-example" data-tags="blog random example" data-tiddler-title="Another Blog Post"><div class="tc-tiddler-title"><div class="tc-titlebar"><span class="tc-tiddler-controls"><span class=" tc-reveal"><button aria-label="more" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="More actions"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="edit" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Edit this tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="close" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Close this tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span></span><span><h2 class="tc-title">Another Blog Post</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class=" tc-reveal" hidden="true"></div>
+<div class="tc-subtitle">
+<a class="tc-tiddlylink tc-tiddlylink-missing" href="./.html">
+
+</a> 2015/4/23 20:13
+</div>
+<div class="tc-tags-wrapper">
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves taglink" href="./tags/example.html"><span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:#f77;
+fill:#222222;
+color:#222222;">
+example
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span></a>
+<a class="tc-tiddlylink tc-tiddlylink-resolves taglink" href="./tags/random.html"><span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:#7ff;
+fill:#222222;
+color:#222222;">
+random
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span></a>
+</div>
+
+<div class="tc-tiddler-body tc-reveal"><p>another example</p></div>
+
+<div class="tc-tiddler-plugin-info tc-reveal"><p>
+</p></div>
+</div>
+
+</p>
+<p><a class="tc-tiddlylink tc-tiddlylink-resolves" href="./2015/04/23/another-blog-post.html">View As Single Post &gt;&gt;</a>
+<br>
+<br>
+</p>
+
+
+</section>
+</body>
+</html>

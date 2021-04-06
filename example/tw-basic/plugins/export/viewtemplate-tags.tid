@@ -1,0 +1,7 @@
+tags: $:/tags/ViewTemplate
+title: $:/core/ui/ViewTemplate/tags
+
+<div class="tc-tags-wrapper">
+<$list filter="[all[current]tags[]sort[title]]-[[$:/plugins/welford/twstaticblog/helper/ctrl.hidden]tags[]]">
+<$link class="taglink" to={{!!title}} taglink="true"><$transclude tiddler="$:/core/ui/TagTemplate"/></$link></$list>
+</div>

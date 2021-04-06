@@ -1,0 +1,3 @@
+title: $:/plugins/welford/twstaticblog/export/readme
+
+Plugin to use when exporting tiddlwyiki. Do not include in your normal tiddlwiki!, use $:/plugins/welford/twstaticblog/helper for that

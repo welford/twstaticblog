@@ -1,0 +1,3 @@
+title: $:/plugins/welford/twstaticblog/helper/readme
+
+Plugin to let you configure your TW for static export. Include this in your TW, and use $:/plugins/welford/twstaticblog/export when actually exporting the wiki

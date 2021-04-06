@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+<head>
+<meta name="tiddlywiki-version" content="5.1.23" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="application-name" content="TiddlyWiki" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="format-detection" content="telephone=no" />
+<link id="faviconLink" rel="shortcut icon" href="../../../favicon.ico">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link rel="stylesheet" href="../../../static.css">
+<title></title>
+</head>
+<body class="tc-body">
+<p><div> 
+<a class="tc-tiddlylink tc-tiddlylink-missing" href="../../../index.html">Sample Static Blog</a>, <a class="tc-tiddlylink tc-tiddlylink-shadow" href="../../../tags.html">Tags</a>. A barebones header, replace me!
+</div>
+</p>
+<section class="tc-story-river">
+
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-blog tc-tagged-hello" data-tags="blog hello" data-tiddler-title="Creating A Static Blog"><div class="tc-tiddler-title"><div class="tc-titlebar"><span class="tc-tiddler-controls"><span class=" tc-reveal"><button aria-label="more" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="More actions"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="edit" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Edit this tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="close" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Close this tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span></span><span><h2 class="tc-title">Creating A Static Blog</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class=" tc-reveal" hidden="true"></div>
+<div class="tc-subtitle">
+<a class="tc-tiddlylink tc-tiddlylink-missing" href="./.html">
+
+</a> 2021/4/6 20:59
+</div>
+<div class="tc-tags-wrapper">
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves taglink" href="../../../tags/hello.html"><span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:#000;
+fill:#cccccc;
+color:#cccccc;">
+hello
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span></a>
+</div>
+
+<div class="tc-tiddler-body tc-reveal"><h1 class="">Overview</h1><p>(This is generated from the examples in <a class="tc-tiddlylink-external" href="https://github.com/welford/twstaticblog/" rel="noopener noreferrer" target="_blank">https://github.com/welford/twstaticblog/</a> 👍 )</p><p>I keep notes on various things in Tiddlywiki and it is very useful to be able to export my blog from the same resource. Currently <a class="tc-tiddlylink tc-tiddlylink-missing" href="./tiddlywiki.html">TiddlyWiki</a> has a good but bare bones static export mechanism, I have made some plugins to enable something more along the lines of what I want in a static blog.</p><p>Put simply, if I tag any tiddler within my tiddlywiki with a special tag e.g. <span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#222222;
+color:#222222;">
+blog
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span> then that tiddler will be included as part of my blog when I run the export batch file. The tags used to specify what is and what isn't an export target are configurable. </p><p>I use these plugins to generate <a class="tc-tiddlylink-external" href="http://phasersonkill.com/" rel="noopener noreferrer" target="_blank">http://phasersonkill.com/</a> </p><p>The code for this example can be found here: <a class="tc-tiddlylink-external" href="https://github.com/welford/twstaticblog" rel="noopener noreferrer" target="_blank">https://github.com/welford/twstaticblog</a> (see example folder for this very file)</p><ul><li>this guide is windows specific in places</li><li>you will need node.js follow the <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/#GettingStarted%20-%20Node.js" rel="noopener noreferrer" target="_blank">tiddlywiki guide </a> for details</li></ul><h1 class="">Plugins</h1><p>This actually required two plugins. One helper that exists within your tiddlwyiki, and another export plugin you use in a <a class="tc-tiddlylink tc-tiddlylink-missing" href="./-https-tiddlywiki-com-tiddlywikifolders.html">Wikifolder</a></p><h2 class="">Helper</h2><dl><dt><a class="tc-tiddlylink-external" href="https://github.com/welford/twstaticblog/tree/master/helper" rel="noopener noreferrer" target="_blank">https://github.com/welford/twstaticblog/tree/master/helper</a></dt></dl><p>Locally available here : <a class="tc-tiddlylink tc-tiddlylink-resolves" href="#">$:/plugins/welford/twstaticblog/helper</a></p><dl><dd>Exists within your Tiddlywiki and lets you customise the blog's output without having to worry about the format of your own wiki changing. By editing the tiddlers in this plugin you can change the name of the blog, which tags define your blog, how posts are linked to, and several other things.  </dd></dl><h2 class="">Exporter</h2><dl><dt><a class="tc-tiddlylink-external" href="https://github.com/welford/twstaticblog/tree/master/export" rel="noopener noreferrer" target="_blank">https://github.com/welford/twstaticblog/tree/master/export</a></dt><dd>Invoked when exporting the blog, this plugin swaps out some of the core view template tiddlers for those in the helper and as such should not be imported into your own TW. It also contains the templates used when constructing each type of page (The types, discussed below, are <strong>Blog Post</strong>, <strong>Index</strong>, <strong>Framework</strong>, and <strong>Tag</strong>)</dd></dl><h1 class="">Helper Details</h1><h2 class="">Configuration</h2><p>All the tags listed below are fully customizable:</p><table><thead><tr class="evenRow"><td align="center">plugin tiddler</td><td align="center">purpose</td></tr></thead><tbody><tr class="oddRow"><td align="center"><code>$:/plugins/welford/twstaticblog/helper/ctrl.post</code></td><td>Defines which tags constitutes a blog post, defaults to <span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#222222;
+color:#222222;">
+blog
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span></td></tr><tr class="evenRow"><td align="center"><code>$:/plugins/welford/twstaticblog/helper/ctrl.framework</code></td><td>Defines which tags constitutes a blog framework <span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#222222;
+color:#222222;">
+blog-framework
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span></td></tr><tr class="oddRow"><td align="center"><code>$:/plugins/welford/twstaticblog/helper/ctrl.donotexport</code></td><td>Defines which tags should not be exported even if they are tagged as a blog posts or blog frameworks <span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#222222;
+color:#222222;">
+blog-donotexport
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span><span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#222222;
+color:#222222;">
+blog-draft
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span></td></tr><tr class="evenRow"><td align="center"><code>$:/plugins/welford/twstaticblog/helper/ctrl.donotindex</code></td><td>Defines which tags will filtered from the index post <span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#222222;
+color:#222222;">
+unindex
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span></td></tr><tr class="oddRow"><td align="center"><code>$:/plugins/welford/twstaticblog/helper/ctrl.hidden</code></td><td align="left">Defines which tags will be excluded from tag posts and from the tag lists below the title of artiles. <span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#222222;
+color:#222222;">
+blog
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span><span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#222222;
+color:#222222;">
+blog-donotexport
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span><span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#222222;
+color:#222222;">
+blog-draft
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span><span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#222222;
+color:#222222;">
+blog-framework
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span><span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#222222;
+color:#222222;">
+unindex
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span></td></tr></tbody></table><h2 class="">ctrl.post</h2><p>Tag any article <span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#222222;
+color:#222222;">
+blog
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span> and it will be exported as part of your blog using the templater <a class="tc-tiddlylink tc-tiddlylink-shadow" href="#">$:/plugins/welford/twstaticblog/helper/template.post.html</a> . The output directory will be <code>./YYYY/MM/DD/[tiddlername].html</code> based on their creation date of the article. </p><p>You can change the tags which define a blog post via <code>$:/plugins/welford/twstaticblog/helper/blogentrytags</code></p><p>e.g. <a class="tc-tiddlylink tc-tiddlylink-resolves" href="../../../2021/04/06/creating-a-static-blog.html">This post you are reading</a></p><h2 class="">template.index.html </h2><p>Any recently created article tagged with <span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#222222;
+color:#222222;">
+blog
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span> will be included in <code>index.html</code> using the <a class="tc-tiddlylink tc-tiddlylink-shadow" href="#">$:/plugins/welford/twstaticblog/helper/template.index.html</a>. This can be prevented by also adding the tag <span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#222222;
+color:#222222;">
+unindex
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span></p><p>e.g. the exported index.html</p><h2 class="">Framework</h2><p>Tag any article <span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#222222;
+color:#222222;">
+blog-framework
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span> and it will be exported as part of your blog as a &quot;framework&quot; post using the template <a class="tc-tiddlylink tc-tiddlylink-shadow" href="#">$:/plugins/welford/twstaticblog/helper/template.framework.html</a>. The output location in the root directory. I define a framework article as being a post which helps you navigate the site or one that is accessabe everywhere. I have included a few example framework posts in the helper plugin.</p><p>e.g. <a class="tc-tiddlylink tc-tiddlylink-shadow" href="../../../tags.html">Tags</a>, <a class="tc-tiddlylink tc-tiddlylink-resolves" href="../../../about.html">About</a> both linked to at the top of this page</p><h2 class="">Tag</h2><p>As this is a static site generator there is no search functionaity. My plugin auto-generates tag posts, using the template <a class="tc-tiddlylink tc-tiddlylink-shadow" href="#">$:/plugins/welford/twstaticblog/helper/template.tag.html</a>,  based on any tag in blog or framework posts as a kind of simple site-map. You can exclude tags from being included in this by adding them to the tag list in <code>$:/plugins/welford/twstaticblog/helper/hiddentags</code>  </p><p>By default the following are excluded: </p><p>e.g. <a class="tc-tiddlylink tc-tiddlylink-resolves" href="../../../tags/example.html"><span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:#f77;
+fill:#222222;
+color:#222222;">
+example
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span> </a><a class="tc-tiddlylink tc-tiddlylink-resolves" href="../../../tags/random.html"><span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:#7ff;
+fill:#222222;
+color:#222222;">
+random
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span> </a><a class="tc-tiddlylink tc-tiddlylink-resolves" href="../../../tags/unique-tag.html"><span class="tc-tag-list-item">
+<span class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:#77f;
+fill:#222222;
+color:#222222;">
+unique tag
+</span>
+<span class="tc-drop-down tc-reveal" hidden="true"></span></span> </a> &lt;- you can click on these and jump to specified tag page.</p><h1 class="">Static Bannner</h1><p>A banner can be added to the top of every page via <a class="tc-tiddlylink tc-tiddlylink-shadow" href="#">$:/plugins/welford/twstaticblog/helper/blog-banner</a> in my case I use it to link to some of the framework posts.</p></div>
+
+<div class="tc-tiddler-plugin-info tc-reveal"><p>
+</p></div>
+</div>
+
+</p>
+
+</section>
+</body>
+</html>

@@ -25,7 +25,7 @@ title: $:/plugins/welford/twstaticblog/helper/template.tag.html
 `{{$:/plugins/welford/twstaticblog/helper/blog-banner||$:/core/templates/html-tiddler}}`
 <section class="tc-story-river">
 `<$importvariables filter="[[$:/core/ui/PageMacros]] [all[shadows+tiddlers]tag[$:/tags/Macro]!has[draft.of]]">
-<$view tiddler="$:/plugins/welford/staticlinks/helper/vt.tagpage" format="htmlwikified"/>
+<$view tiddler="$:/plugins/welford/twstaticblog/helper/vt.tagpage" format="htmlwikified"/>
 </$importvariables>`
 </section>
 </body>

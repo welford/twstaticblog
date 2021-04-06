@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta name="tiddlywiki-version" content="5.1.23" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="application-name" content="TiddlyWiki" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="format-detection" content="telephone=no" />
+<link id="faviconLink" rel="shortcut icon" href="../../../favicon.ico">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link rel="stylesheet" href="../../../static.css">
+<title></title>
+</head>
+<body class="tc-body">
+<p><div> 
+<a class="tc-tiddlylink tc-tiddlylink-missing" href="../../../index.html">Sample Static Blog</a>, <a class="tc-tiddlylink tc-tiddlylink-shadow" href="../../../tags.html">Tags</a>. A barebones header, replace me!
+</div>
+</p>
+<section class="tc-story-river">
+
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-blog" data-tags="blog" data-tiddler-title="Export Static Blog"><div class="tc-tiddler-title"><div class="tc-titlebar"><span class="tc-tiddler-controls"><span class=" tc-reveal"><button aria-label="more" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="More actions"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="edit" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Edit this tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="close" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Close this tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span></span><span><h2 class="tc-title">Export Static Blog</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class=" tc-reveal" hidden="true"></div>
+<div class="tc-subtitle">
+<a class="tc-tiddlylink tc-tiddlylink-missing" href="./.html">
+
+</a> 2021/4/6 20:58
+</div>
+<div class="tc-tags-wrapper">
+
+</div>
+
+<div class="tc-tiddler-body tc-reveal"><h1 class="">Install Node.js and Tiddlywiki</h1><p>follow the guide : <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/#GettingStarted%20-%20Node.js" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/#GettingStarted%20-%20Node.js</a></p><h1 class="">Example Batch File</h1><p>see <a class="tc-tiddlylink-external" href="https://github.com/welford/twstaticblog/tree/master/example/export-basic.bat" rel="noopener noreferrer" target="_blank">https://github.com/welford/twstaticblog/tree/master/example/export-basic.bat</a></p><pre><code>rd .\temp\blog-basic /s /q
+call tiddlywiki --load .\example.html --savewikifolder .\temp\blog-basic
+XCOPY /E /I /Y .\tw-basic .\temp\blog-basic
+call tiddlywiki .\temp\blog-basic --output .\blog-basic --build css
+call tiddlywiki .\temp\blog-basic --output .\blog-basic --build framework
+call tiddlywiki .\temp\blog-basic --output .\blog-basic --build tag
+call tiddlywiki .\temp\blog-basic --output .\blog-basic --build posts
+call tiddlywiki .\temp\blog-basic --output .\blog-basic --build index
+rd .\temp\blog-basic /s /q</code></pre><ol><li>Delete ./temp/blog-basic incase it is not empty</li><li>Export the local tiddlywiki, in this case example.html, as a wikifolder to ./temp/blog-basic<ol><li>see <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/#TiddlyWikiFolders" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/#TiddlyWikiFolders</a> for full details</li></ol></li><li>copy ./tw-basic/ folder to ./temp/blog-basic<ol><li>This lets us override any settings in the original exported wiki</li><li>Crucially it contains the export part of the plugin</li></ol></li><li>Load the temp wiki folder and export css to .\blog-basic</li><li>Load the temp wiki folder and export framework pages to .\blog-basic</li><li>Load the temp wiki folder and export tag pages to .\blog-basic</li><li>Load the temp wiki folder and export posts pages to .\blog-basic</li><li>Load the temp wiki folder and export index pages to .\blog-basic</li><li>delete ./temp/blog-basic </li></ol><h1 class="">Styled Example</h1><p>see <a class="tc-tiddlylink-external" href="https://github.com/welford/twstaticblog/tree/master/example/export-styled.bat" rel="noopener noreferrer" target="_blank">https://github.com/welford/twstaticblog/tree/master/example/export-styled.bat</a></p><p>exports temp to <code>.\temp\blog-styled</code> and final data to <code>.\blog-styled</code></p><p>uses <code>.\tw-styled</code> to override the tyles in this wiki</p></div>
+
+<div class="tc-tiddler-plugin-info tc-reveal"><p>
+</p></div>
+</div>
+
+</p>
+
+</section>
+</body>
+</html>
