@@ -19,3 +19,13 @@ Included in a temporary TW during export. Helps the exporter fix up links as we 
 + getexportimage.js
 + getexportlink.js
 + getexportpath.js
+
+## Examples
+
+see http://welford.github.io/twstaticblog/example/index.html which exports to:
+
+http://welford.github.io/twstaticblog/example/blog-basic/index.html 
+
+or
+
+http://welford.github.io/twstaticblog/example/blog-styled/index.html
